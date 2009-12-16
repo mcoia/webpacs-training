@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>INNOPAC Adavanced Search</TITLE>
+</HEAD>
+<BODY BGCOLOR="lightgrey" onLoad="document.forms[0].SEARCH.focus(); document.forms[0].SEARCH.select();">
+<center>
+<!--{msg}-->
+</center>
+<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=10 VALIGN="top">
+<TR>
+<TD ALIGN="left" VALIGN="top">
+Type the <B>WORD(S)</B> you want, then click <b>Search</b>
+<FORM ACTION=/search/Z METHOD=POST>
+<!--{search}-->
+<INPUT TYPE=HIDDEN NAME=SORT VALUE=S>
+<!--{submit}-->
+</FORM>
+<A HREF="/search/X"><IMG SRC="/screens/advanced.gif"
+BORDER=0 ALT="[ADVANCED SEARCH]"></a>&nbsp;
+<A HREF="/search/Y"><IMG SRC="/screens/simple.gif" BORDER=0 ALT="[SIMPLE SEARCH]"></a>
+<A HREF="/search/"><IMG SRC="/screens/newsrch.gif" 
+BORDER=0 ALT="[START OVER]"></A>
+<p> 
+
+<TABLE CELLPADDING=3 CELLSPACING=2 WIDTH="100%">
+<TR>
+<TH WIDTH=10%></TH>
+<TH WIDTH=40%>Type in Words to search: </TH>
+<TH WIDTH=50%>EXAMPLES</TH></TR>
+<TR>
+<TD WIDTH=100><b>ADJACENCY</b></TD>
+<TD><FONT SIZE=-1>
+Multiple words are searched together as one phrase, enclose in quotes.</FONT></TD>
+<TD><TT>"global warming"</TT></TD>
+<TR>
+<TD WIDTH=100><b>TRUNCATION</b></TD><TD><FONT SIZE=-1>
+Words may be right-hand truncated using an asterisk.</FONT></TD>
+<TD><TT>populat*</TT></TD>
+<TR>
+<TD WIDTH=100><b>OPERATORS</b></TD><TD><FONT SIZE=-1>
+These do not work the same as Boolean operators, they only apply to one word, 
+they do not modify the relationship between words.  Use a + to require a word be present,
+use a - to exclude a word, if not specified the assumed operator is OR </FONT></TD>
+<TD><TT><UL><LI>nuclear +family (finds any record with nuclear AND family, and 
+any record with family)<BR>
+<LI>+nuclear +family (finds any record with nuclear AND family)<BR><LI>nuclear -family (finds any record with nuclear AND NOT family, and any record without family)<BR><LI>+nuclear -family (finds any record with nuclear AND NOT family)</TD>
+</TT>
+</FONT>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

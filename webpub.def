@@ -1,0 +1,192 @@
+# -----------------------------------------------------
+# Converted by cvpubdef from pubdef
+# -----------------------------------------------------
+#
+#
+# converted by cvpubdef from HOLDINGS_POS: atpeR
+#
+#
+# converted from HOLDINGS_POS field tag: 'a'
+#
+b|a|110|-6|Corp Author||b|
+b|a|111|-6|Meeting Name||b|
+b|a||-6|Author||b|
+#
+# converted from HOLDINGS_POS field tag: 't'
+#
+b|t|240|-6|Uniform Titl||b|
+b|t||-6|Title||b|
+#
+# converted from HOLDINGS_POS field tag: 'p'
+#
+b|p|270|-6|Address||b|
+b|p||-6|Published||b|
+#
+# converted from HOLDINGS_POS field tag: 'e'
+#
+b|e||-6|Edition||b|
+#
+# end HOLDINGS_POS
+#
+#
+# next line added by cvpubdef
+b|H|||||
+#
+b|f|970|-6|||b|
+b|f||-6|Contents||b|
+b|r|30[0-9]|-6|Description||b|
+b|r|310|-6|Frequency||b|
+b|r|321|-6|Former Frequency||b|
+b|r|350|-6|||b|
+b|r|359|-6|||b|
+b|r|362|-6|Publ History||b|
+b|r||-6|Descript.||b|
+b|s|490 1|-6|||b|
+b|s||-6|Series||b|
+b|n|508|-6|Credits||b|
+b|n|510|-6|||b|
+b|n|511[^1]|-6|Cast||b|
+b|n|5111|-6|Cast||b|
+b|n|5112|-6|Presenter||b|
+b|n|5113|-6|Narrator||b|
+b|n|520|-6|Summary||b|
+b|n|5210|-6|Read.Level||b|
+b|n|5211|-6|Age Level||b|
+b|n|521[2-4]|-6|Audience||b|
+b|n|521|-6|Audience||b|
+b|n|5260|-6|Reading Program||b|
+b|n|533|-6|Format||b|
+b|n|555[^0]|-6|Indexes||b|
+b|n|590|-6|||b|
+b|n|59[1-9]|-6|Local Note||b|
+b|n||-6|Note||b|
+b|x|7801|-6|||b|
+b|x|780.0|-6|Continues||b|
+b|x|780.1|-6|Cont.In Part||b|
+b|x|780.2|-6|Supercedes||b|
+b|x|780.3|-6|Supercede Pt||b|
+b|x|780.4|-6|Union Of||b|
+b|x|780.5|-6|Absorbed||b|
+b|x|780.6|-6|Absorbed Pt||b|
+b|x|780.7|-6|Split From||b|
+b|x||-6|Continues||b|
+b|z|785.0|-6|Continued By||b|
+b|z|785.1|-6|Continued Pt ||b|
+b|z|785.2|-6|Supercede By||b|
+b|z|785.3|-6|Supercede By||b|
+b|z|785.4|-6|Absorbed By||b|
+b|z|785.5|-6|Absorbed Pt||b|
+b|z|785.6|-6|Split Into||b|
+b|z|785.7|-6|Merged With ||b|
+b|z|785.8|-6|Changed Back ||b|
+b|z||-6|Cont'd By||b|
+b|q||-6|Related To||b|
+b|d||-26|LC SUBJECT||b|
+b|j|600.[2-8]|-26|Keyword||b|
+b|j|610.[2-8]|-26|Keyword||b|
+b|j|611.[2-8]|-26|Keyword||b|
+b|j|630.[2-8]|-26|Keyword||b|
+b|j|650.[2-8]|-26|Keyword||b|
+b|j|651.[2-8]|-26|Keyword||b|
+b|j|65[3-8]|-26|Keyword||b|
+b|j|69[0-9]|-26|Keyword||b|
+b|j|752|-26|Place||b|
+b|j|753|-26|Keyword||b|
+b|j|754|-26|Keyword||b|
+b|j|755|-26|Phys Charac||b|
+b|j||-26|Add Keywrd||b|
+b|m|600.1|-26|Child Subj||b|
+b|m|610.1|-26|Child Subj||b|
+b|m|611.1|-26|Child Subj||b|
+b|m|630.1|-26|Child Subj||b|
+b|m|650.1|-26|Child Subj||b|
+b|m|651.1|-26|Child Subj||b|
+b|m||-26|Child Subj||b|
+b|b|700 2|-6|Includes||b|
+b|b|70[0-9]|-6|Other Author||b|
+b|b|710|-6|Other Author||b|
+b|b|710 2|-6|Includes||b|
+b|b|711|-6|Other Author||b|
+b|b|711 2|-6|Includes||b|
+b|b||-6|Add Author||b|
+b|u|130|-6|Uniform Titl||b|
+b|u|210|-6|Other Title||b|
+b|u|214|-6|Other Title||b|
+b|u|222|-6|Key Title||b|
+b|u|242|-6|Translation||b|
+b|u|243|-6|Other Title||b|
+b|u|246.[0-3]|-6|Other Title||b|
+b|u|2461 |-6|Other Title||b|
+b|u|2461[01]|-6|||b|
+b|u|24612|-6|Other Title||b|
+b|u|24613|-6|Other Title||b|
+b|u|24614|-6|Cover Title||b|
+b|u|24615|-6|Other Title||b|
+b|u|24616|-6|Caption Titl||b|
+b|u|24617|-6|Running Titl||b|
+b|u|24618|-6|Spine Titl||b|
+b|u|2463|-6|Other Title||b|
+b|u|24700|-6|||b|
+b|u|24701|-6|||b|
+b|u|24710|-6|Other Title||b|
+b|u|24711|-6|Other Title||b|
+b|u|730 2|-6|Includes||b|
+b|u|730|-6|Other Title||b|
+b|u|740 2|-6|Includes||b|
+b|u|740|-6|Other Title||b|
+b|u||-6|Add Title||b|
+b|g||-6|Sudoc#||b|
+b|i|020|-6c|ISBN||b|
+b|i|022|-6c|ISSN||b|
+b|i|0242|-6c|Ismn||b|
+b|i|025|-6c|||b|
+b|i|027|-6c|Tech Rept#||b|
+b|i|028 0|-6c|||b|
+b|i|028 3|-6c|||b|
+b|i|0280[12]|-6c|Issue#||b|
+b|i|0281[12]|-6c|Matrix#||b|
+b|i|0282[12]|-6c|Plate#||b|
+b|i|0283[12]|-6c|Pub#||b|
+b|i|0284[12]|-6c|Video Pub#||b|
+b|i|030|-6c|Coden||b|
+b|i|032|-6c|||b|
+b|i|033|-6c|||b|
+b|i|034|-6c|||b|
+b|i|035|-6c|||b|
+b|i|036|-6c|||b|
+b|i|037|-6c|||b|
+b|i|074|-6c|Gpo Item#||b|
+b|i|088|-6c|Tech Rept#||b|
+b|i||-6c|Standard#||b|
+b|o|001|-6c|OCLC#||b|
+b|o|019|-6c|OCLC#||b|
+b|o||-6c|OCLC #||b|
+b|y|856|u|Url||b|
+b|y|[^8]..|u|||b|
+b|y|8[^5].|u|||b|
+b|y|85[^6]|u|||b|
+b|y||u|Misc Marc||b|
+c|i||a|Identity||b|&nbsp;
+c|C||&|||b|&nbsp;
+c|Q||||b|
+c|n||&|Note||b|
+c|$||+|Location||b|
+c|h||-8x|Lib. Has||b|
+c|2||+|Latest Received||b|&nbsp;
+c|3||+|Latest Received||b|
+c|Q||||b|
+#
+# end pubdef
+#
+#
+# -----------------------------------------------------
+# Converted by cvpubdef from item_col_width: 1(23),Cv#(30),%
+# -----------------------------------------------------
+i|1||||29|b|
+i|C||||0|b|&nbsp;
+i|v||||0|b|&nbsp;
+i|#||||38|b|
+i|Q||||b|
+i|%||||0|b|
+#
+#end converted webpub.def
