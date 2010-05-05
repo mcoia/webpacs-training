@@ -1,54 +1,80 @@
-<HTML>
-<HEAD>
-<TITLE>INNOPAC Adavanced Search</TITLE>
-</HEAD>
-<BODY BGCOLOR="lightgrey" onLoad="document.forms[0].SEARCH.focus(); document.forms[0].SEARCH.select();">
-<center>
-<!--{msg}-->
-</center>
-<TABLE BORDER=0 CELLSPACING=10 CELLPADDING=10 VALIGN="top">
-<TR>
-<TD ALIGN="left" VALIGN="top">
-Type the <B>WORD(S)</B> you want, then click <b>Search</b>
-<FORM ACTION=/search/Z METHOD=POST>
-<!--{search}-->
-<INPUT TYPE=HIDDEN NAME=SORT VALUE=S>
-<!--{submit}-->
-</FORM>
-<A HREF="/search/X"><IMG SRC="/screens/advanced.gif"
-BORDER=0 ALT="[ADVANCED SEARCH]"></a>&nbsp;
-<A HREF="/search/Y"><IMG SRC="/screens/simple.gif" BORDER=0 ALT="[SIMPLE SEARCH]"></a>
-<A HREF="/search/"><IMG SRC="/screens/newsrch.gif" 
-BORDER=0 ALT="[START OVER]"></A>
-<p> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 23 Mar 2010 -->
+<head>
+<title>Millennium Web Catalog</title>
+<script language="JavaScript">
+<!-- Hide the JS
+startTimeout(600000, "/");
+// -->
 
-<TABLE CELLPADDING=3 CELLSPACING=2 WIDTH="100%">
-<TR>
-<TH WIDTH=10%></TH>
-<TH WIDTH=40%>Type in Words to search: </TH>
-<TH WIDTH=50%>EXAMPLES</TH></TR>
-<TR>
-<TD WIDTH=100><b>ADJACENCY</b></TD>
-<TD><FONT SIZE=-1>
-Multiple words are searched together as one phrase, enclose in quotes.</FONT></TD>
-<TD><TT>"global warming"</TT></TD>
-<TR>
-<TD WIDTH=100><b>TRUNCATION</b></TD><TD><FONT SIZE=-1>
-Words may be right-hand truncated using an asterisk.</FONT></TD>
-<TD><TT>populat*</TT></TD>
-<TR>
-<TD WIDTH=100><b>OPERATORS</b></TD><TD><FONT SIZE=-1>
-These do not work the same as Boolean operators, they only apply to one word, 
-they do not modify the relationship between words.  Use a + to require a word be present,
-use a - to exclude a word, if not specified the assumed operator is OR </FONT></TD>
-<TD><TT><UL><LI>nuclear +family (finds any record with nuclear AND family, and 
-any record with family)<BR>
-<LI>+nuclear +family (finds any record with nuclear AND family)<BR><LI>nuclear -family (finds any record with nuclear AND NOT family, and any record without family)<BR><LI>+nuclear -family (finds any record with nuclear AND NOT family)</TD>
-</TT>
-</FONT>
-</TABLE>
-</TD>
-</TR>
-</TABLE>
-</BODY>
-</HTML>
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="600;URL=/" />
+</noscript>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+</head>
+<body>
+<!--{toplogo}-->
+<div class="pageContentInner">
+
+<h1 class="pageHeader">AltaVista-style Search</h1>
+
+<div class="formsTogether" id="accessibleForm">
+<div class="form1Part">
+<form method="get">
+<fieldset>
+<!-- Optional legend:
+<legend>Type the keyword(s) in the box below then click the Search button to perform the search.</legend>
+-->
+<div class="formEntryArea">
+<span class="formLabel">
+<label for="SEARCH">Search for:</label>
+</span>
+<!--{search}-->
+</div>
+
+<div class="formButtonArea">
+<!--{nosort}-->
+<!--{submit}-->
+</div>
+</fieldset>
+</form>
+</div><!--form1Part -->
+
+<div class="clear"></div>
+
+<div>
+<!--This section may apply depending on catalog version and configuration. -->
+<!--<h2>AltaVista-style Truncation</h2>
+<p>Words may be right-hand truncated using an asterisk. Use a single asterisk * to truncate from 1-5 characters. Use a double asterisk ** for open-ended truncation.<br>
+Examples:</p>
+<ul>
+<li>populat*</li>
+<li>dost**</li>
+</ul>
+ -->
+ 
+<h2 class="pageHeader">AltaVista-style Operators</h2>
+<p>These do not work the same as Boolean operators; they only apply to one word and they do not modify the relationship between words. Use a + to require a word be present, use a - to exclude a word. If not specified the assumed operator is OR.</p>
+<p>Examples:</p>
+<ul>
+<li>nuclear +family (finds any record with nuclear AND family, and any record with family)</li>
+<li>+nuclear +family (finds any record with nuclear AND family)</li>
+<li>nuclear -family (finds any record with nuclear AND NOT family, and any record without family)</li>
+<li>+nuclear -family (finds any record with nuclear AND NOT family)</li>
+</ul>
+
+</div><!--form1Part -->
+</div><!--formsTogether -->
+</div><!-- pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].SEARCH.focus(); }
+catch(err) {}
+//--><!]]></script>
+</body>
+</html>
