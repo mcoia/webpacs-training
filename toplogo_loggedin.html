@@ -1,8 +1,6 @@
-<!-- begin toplogo.html file -->
+<!-- begin toplogo_loggedin.html file -->
 <!-- Rel 2009B Example Set -->
 <!-- Updated: 12 Apr 2010 -->
-
-<script type="text/javascript" src='/screens/sms.js'> </script>
 
 <div class="minHeight">
 <div class="fullPage">
@@ -12,7 +10,10 @@
 
 <div class="topLinks">
 <ul id="topLinksList">
-<li><a href="/patroninfo" tabindex="120">Login</a></li>
+<li>
+<!--{patronrecord}-->
+</li>
+<li><a href="/" tabindex="120">Log Out</a></li>
 <li><a href="" onClick="window.print();" tabindex="115"><span class="buttonTopLinks"><img src="/screens/ico_printer.gif" alt=""><span class="buttonTopLinksText">Print</span></span></li>
 <li><a href="/search/" tabindex="110">New Search</a></li>
 <li><a href="/help" tabindex="105">Help</a></li>
@@ -24,7 +25,6 @@
 </div>
 
 </div><!--topLogo-->
-
 
 <div class="topMyLibrary">
 <div id="topMyLibraryHeader"><h1>My Library</h1></div>
@@ -38,8 +38,8 @@
 <li><a href="/suggest">Leave Comments</a></li>
 
 <!-- Toplogo optional dropdown menus. Uncomment and ensure all links work locally. -->
-
 <!--
+
 	<li id="first">
 		<div><a href="">Your Library</a></div>
 		<ul>
@@ -72,8 +72,8 @@
 		</ul>
 	</li>
 End optional dropdown menus  -->
-</ul>
 
+</ul>
 <script type="text/javascript"><!--//--><![CDATA[//><!--
 
 //Enable optional dropdown menu for additional navigation options.
@@ -126,4 +126,4 @@ return false;
 <div class="clear"></div>
 <div class="pageContent"><!-- content container -->
 <a name="content" id="content"></a>
-<!--end toplogo.html-->
+<!--end toplogo_loggedin.html-->

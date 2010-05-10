@@ -1,22 +1,45 @@
-<!-- begin toplogo.html file -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
 <!-- Rel 2009B Example Set -->
 <!-- Updated: 12 Apr 2010 -->
+<head>
+<script language="JavaScript">
+<!-- Hide the JS
+startTimeout(600000, "/");
+// -->
 
-<script type="text/javascript" src='/screens/sms.js'> </script>
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="600;URL=/" />
+</noscript>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+<link rel="stylesheet" href="/screens/styles.css" type="text/css">
+<link rel="stylesheet" href="/screens/progreg_styles.css" type="text/css">
+</head>
+<body>
+<!-- begin toplogo_loggedin.html file -->
+<!-- Rel 2009B Example Set -->
+<!-- Updated: December 08 2009 -->
 
 <div class="minHeight">
 <div class="fullPage">
 
 <div id="skipNav"><a href="#content" tabindex="1">Skip to content</a></div>
+
 <div class="topLogo">
 
 <div class="topLinks">
 <ul id="topLinksList">
-<li><a href="/patroninfo" tabindex="120">Login</a></li>
+<li>
+<a href="/patroninfo">Return To Your Record</a>
+</li>
+<li><a href="/" tabindex="120">Log Out</a></li>
 <li><a href="" onClick="window.print();" tabindex="115"><span class="buttonTopLinks"><img src="/screens/ico_printer.gif" alt=""><span class="buttonTopLinksText">Print</span></span></li>
 <li><a href="/search/" tabindex="110">New Search</a></li>
 <li><a href="/help" tabindex="105">Help</a></li>
 </ul>
+
 </div>
 
 <div class="topLogoSmall">
@@ -24,7 +47,6 @@
 </div>
 
 </div><!--topLogo-->
-
 
 <div class="topMyLibrary">
 <div id="topMyLibraryHeader"><h1>My Library</h1></div>
@@ -38,8 +60,8 @@
 <li><a href="/suggest">Leave Comments</a></li>
 
 <!-- Toplogo optional dropdown menus. Uncomment and ensure all links work locally. -->
-
 <!--
+
 	<li id="first">
 		<div><a href="">Your Library</a></div>
 		<ul>
@@ -72,8 +94,8 @@
 		</ul>
 	</li>
 End optional dropdown menus  -->
-</ul>
 
+</ul>
 <script type="text/javascript"><!--//--><![CDATA[//><!--
 
 //Enable optional dropdown menu for additional navigation options.
@@ -126,4 +148,132 @@ return false;
 <div class="clear"></div>
 <div class="pageContent"><!-- content container -->
 <a name="content" id="content"></a>
-<!--end toplogo.html-->
+<!--end toplogo_loggedin.html-->
+
+<div class="progContent"><!-- right container -->
+<div class="progNavrow">
+<!--{return}-->
+</div>
+<div class="progNavMessage">You are logged in as:
+<!--{patronname}-->
+</div>
+<!--{formbegin}-->
+
+<!--{iferrmsg}-->
+<div class="errorMessageStatus">
+<br/>
+<!--{errmsg}-->
+
+<!--{ifregistrationerror}-->
+There was a problem with your registration.  Please see a librarian for assistance.
+<!--{xif}-->
+
+<!--{ifblocked}-->
+You are blocked. Please see a Librarian for assistance.
+<!--{xif}-->
+
+<!--{ifnoteligible}-->
+You are not eligible for this program. Please see a Librarian for assistance.
+<!--{xif}-->
+
+<!--{ifsectionnotavail}-->
+Registration for this section is temporarily unavailable.  Please try your request again.
+<!--{xif}-->
+
+<!--{ifnotopen}-->
+Registration for this section is closed.  Please choose another program or section.
+<!--{xif}-->
+
+<!--{ifsystemerror}-->
+The system has encountered a problem.  Please try your request again.
+<!--{xif}-->
+
+</div><!--end errorMessageStatus -->
+<!--{xif}-->
+
+<br>
+<div class="progRegAlert">Register for:</div>
+<div class="progName" id="program_name">
+<!--{progname}-->
+</div>
+<div class="progRegDescArea">
+<table cellspacing="0" cellpadding="0" class="progRegForm">
+<tr><td class="progConfLabel">Description:</td>
+<td id="program_desc" class="value">
+<!--{progdesc}-->
+</td>
+</tr>
+<tr><td class="progConfLabel">Instructor:</td>
+<td class="value">
+<!--{instructor}-->
+</td>
+</tr>
+<!--{iffee}-->
+<tr>
+<td class="progConfLabel">Price:</td>
+<td class="value">
+<!--{price}-->
+</td>
+</tr>
+<!--{xif}-->
+<tr><td class="progConfLabel">Meets:</td>
+<td>
+<!--{sessionsummary}-->
+</td>
+</tr>
+<tr><td class="progConfLabel">Session(s):</td>
+<td>
+<!--{viewhidesessionlist}-->
+</td>
+</tr>
+<tr><td class="progConfLabel">Location:</td>
+<td class="value">
+<!--{location}-->
+</td>
+</tr>
+<tr><td class="progConfLabel">Notes:</td>
+<td class="value">
+<!--{publicnote}-->
+</td>
+</tr>
+</table>
+</div>
+<div id="program_thumbnail" class="progThumbnail">
+<!--{progthumbnail}-->
+</div>
+
+<br>
+<div class="progRegAlert">Your info:</div>
+<table cellspacing="0" cellpadding="0" class="progRegForm">
+<tr><td class="progConfLabel">Email address on file:</td>
+<td class="value">
+<strong>
+<!--{emailinrecord}-->
+</strong>
+</td>
+</tr>
+<tr><td class="progConfLabel">Update email (optional):</td>
+<td class="value">
+<!--{newemail}-->
+ </td>
+</tr>
+<tr><td class="progConfLabel">Number of seats:</td>
+<td class="value">
+<!--{multiregselect}-->
+</td>
+</tr>
+<tr><td class="progConfLabel">Note to instructor:</td>
+<td class="value">
+<!--{multiregnotes}-->
+</td>
+</tr>
+</table>
+<div class="progRegButtons">
+<!--{confirm}-->
+<!--{cancel}-->
+</div>
+<!--{formend}-->
+</div>
+<!--{botlogo}-->
+</body>
+</html>
