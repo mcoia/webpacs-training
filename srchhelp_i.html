@@ -1,75 +1,75 @@
-
-
-
-
-<HTML>
-<HEAD>
-	<TITLE>MCO Training Catalog/ MCO Training</TITLE>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
-
-
-
-
-</HEAD>
-
-<BODY bgcolor="#f3f3fc" link="#333399" alink="#333399" vlink="#333399" 
-	onLoad="document.forms[0].SEARCH.focus(); document.forms[0].SEARCH.select();">
-
-<!--{toplogo}-->
-<!-- Begin Search Help Text -->
-<h3 align="center"><b>Standard Number Search</b></h3>
-<p>Type the Number: </p>
-<form method="GET" ACTION="/search/i">
-  <p>
-    <input type="TEXT" name="SEARCH" maxlength="64" size="48" align="CENTER">
-    <input type="SUBMIT" value="Search" name="SUBMIT">
-  </p>
-</form>
-<p>Search here for standard numbers such as ISBN, ISSN, technical report and music numbers.</p>
-<p><i>for example</i> </p>
-<ul>
-<li>International Standard Serial Number (ISSN)</li>
-<ul>
-  <li>0040-781x</li>
-  <li>0033 3107</li>
-</ul>
-<li>International Standard Book Number (ISBN)</li>
-<ul>
-  <li>0201112116</li>
-  <li>0123467652</li>
-</ul>
-<li>Record Label Numbers</li>
-<ul>
-  <li>SP-33-143</li>
-  <li>RCA LM 1080</li>
-</ul>
-<li>CODEN</li>
-<ul>
-  <li>SCIEAS</li>
-  <li>LANAA1</li>
-</ul>
-<li>STRN</li>
-<ul>
-  <li>FHWA/CA/NT/CSU-91-01</li>
-  <li>YA-512-CT-200</li>
-</ul>
-<li>LCCN</li>
-<ul>
-  <li>79-51608</li>
-  <li>agr-04394</li>
-  <li>agr04003603</li>
-</ul>
-</ul>
-
-<p><i>search tips</i> </p>
-
-<ul>
-  <li>Type in the ISSN, CODEN, STRN, or LCCN exactly as cited.</li>
-  <li>Type ISBN without hyphens.</li>
-</ul>
-<!-- End Search Help Text -->
-<p><a HREF="/search/">Return to Main Menu</a></p> 
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 23 Mar 2010 -->
+<head>
+<title>Millennium Web Catalog</title>
+<script language="JavaScript">
+<!-- Hide the JS
+startTimeout(600000, "/");
+// -->
+
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="600;URL=/" />
+</noscript>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+</head>
+<body>
+<!--{toplogo}-->
+<div class="pageContentInner">
+
+<h1 class="pageHeader">ISBN/ISSN Search</h1>
+
+<div id="accessibleForm" class="form2Part">
+<div class="formLeft">
+<form method="get">
+<fieldset>
+<!-- Optional legend:
+<legend>Type the standard number (ISBN or ISSN) you want to find, then press the Enter key or click Submit.</legend>
+-->
+<div class="formEntryArea">
+<span class="formLabel">
+<label for="SEARCH">Search for:</label>
+</span>
+<!--{search}-->
+</div>
+<div class="formEntryArea">
+<span class="formLabel">
+<label for="sortdropdown">Sort by:</label>
+</span>
+<!--{indexsort}-->
+</div>
+<div class="formEntryArea formScopeSearch">
+<span class="formLabel">
+<label for="searchscope">Search in the:</label>
+</span>
+<!--{scope}-->
+</div>
+
+<div class="formButtonArea">
+<!--{submit}-->
+</div>
+</fieldset>
+</form>
+</div><!--formLeft -->
+
+<div class="formRight">
+<p>Type the ISBN or ISSN as it appears. Punctuation and spaces can be omitted if desired. For example:</p>
+<ul>
+<li>0060254920</li>
+<li>0303-7207</li>
+</ul>
+</div><!--formRight -->
+
+</div><!--form2Part -->
+</div><!--pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].SEARCH.focus(); }
+catch(err) {}
+//--><!]]></script>
+</body>
+</html>

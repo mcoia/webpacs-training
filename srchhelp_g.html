@@ -1,57 +1,75 @@
-
-
-
-
-<HTML>
-<HEAD>
-	<TITLE>MCO Training Catalog/ MCO Training</TITLE>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
-
-
-
-
-</HEAD>
-
-<BODY bgcolor="#f3f3fc" link="#333399" alink="#333399" vlink="#333399" 
-	onLoad="document.forms[0].SEARCH.focus(); document.forms[0].SEARCH.select();">
-<!--{toplogo}-->
-<!-- Begin Search Help Text -->
-<h3 align="center"><b>Government Document Call Number Search</b></h3>
-<p>Type the SuDoc or MoDoc Document Number: </p>
-<form METHOD="GET" ACTION="/search/g">
-  <p> 
-    <input TYPE="TEXT" NAME="SEARCH" MAXLENGTH="64" SIZE="48" ALIGN="CENTER">
-    <input TYPE="SUBMIT" VALUE="Search">
-  </p>
-</form>
-<p>Type as much of the SuDoc or MoDoc Document Number as you know.</p>
-<p>SuDoc: Superintendent of Documents number used for United States government documents; MoDoc: call number used for Missouri State government documents.</p> 
-<p><i>for example</i> </p>
-<ul>
-<li>SuDoc Numbers</li>
-<ul>
-  <li>C 3.186/3-2:992</li>
-  <li>D 101.22:550-25/990</li>
-  <li>HE 20.3152:F 94/4</li>
-  <li>LC 33.10:</li>
-</ul>
-<li>MoDoc Numbers</li>
-<ul>
-  <li>MO ECON To 12:9996-97</li>
-  <li>MO ED 4:sch 1/</li>
-  <li>MO NR.En 2:</li>
-  <li>MO PS.Hp 5:In 7/</li>
-</ul>
-</ul>
-
-<p><i>search tips</i> </p>
-
-<ul>
-  <li>Always type MO at the beginning of a MoDoc number.</li>
-</ul>
-<!-- End Search Help Text -->
-<p><a HREF="/search/">Return to Main Menu</a></p> 
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 23 Mar 2010 -->
+<head>
+<title>Millennium Web Catalog</title>
+<script language="JavaScript">
+<!-- Hide the JS
+startTimeout(600000, "/");
+// -->
+
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="600;URL=/" />
+</noscript>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+</head>
+<body>
+<!--{toplogo}-->
+<div class="pageContentInner">
+
+<h1 class="pageHeader">Government Document Number Search</h1>
+
+<div id="accessibleForm" class="form2Part">
+<div class="formLeft">
+<form method="get">
+<fieldset>
+<!-- Optional legend:
+<legend>Type the call number you want to find, then press the Enter key or click Submit.</legend>
+-->
+<div class="formEntryArea">
+<span class="formLabel">
+<label for="SEARCH">Search for:</label>
+</span>
+<!--{search}-->
+</div>
+<div class="formEntryArea">
+<span class="formLabel">
+<label for="sortdropdown">Sort by:</label>
+</span>
+<!--{indexsort}-->
+</div>
+<div class="formEntryArea formScopeSearch">
+<span class="formLabel">
+<label for="searchscope">Search in the:</label>
+</span>
+<!--{scope}-->
+</div>
+
+<div class="formButtonArea">
+<!--{submit}-->
+</div>
+</fieldset>
+</form>
+</div><!--formLeft -->
+
+<div class="formRight">
+<p>Type as much or as little of the government document or SUDOC number as you want. Type punctuation for SUDOC number exactly as it appears. For example:</p>
+<ul>
+<li>NAS</li>
+<li>NAS 1.2:AM 3/994</li>
+</ul>
+</div><!--formRight -->
+
+</div><!--form2Part -->
+</div><!--pageContentInner -->
+
+<!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].SEARCH.focus(); }
+catch(err) {}
+//--><!]]></script>
+</body>
+</html>
