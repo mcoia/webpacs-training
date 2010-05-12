@@ -172,7 +172,7 @@ a:hover  { color: #7C14B8; }
 
 .bibDisplayItemsMain, .resourceLicenseArea { float:right; width:80%; }
 
-.bibDisplayJacket  { float:left; margin:0 0 1em 5%; display:inline; width:6em; }
+.bibDisplayJacket  { float:left; margin:0 0 1em 3.5%; display:inline; width:130px; text-align:center; }
 
 .bibLinks th { text-align:center; }
 
@@ -543,6 +543,8 @@ div .bibResourceSidebar { display:none; }
 .fullPage { background:#ffffff; margin-left:auto; margin-right:auto; padding:0px; text-align:left; }
 
 .pageContent div.helpContent { padding-bottom:12em; }
+
+#gbsLink img {margin-top:8px;}
 
 .helpContent h3 { font-size:1.1em; margin-bottom:0px; }
 
