@@ -91,7 +91,7 @@ strong .button { display:block; font-weight:normal; margin-top:15px; }
 
 table { border-collapse:collapse; }
 
-td { font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight : normal; }
+td { font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-style: inherit; font-weight:inherit;}
 
 th { font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; }
 
@@ -394,9 +394,7 @@ table.browseResourceTable { border:0; }
 
 .browseSubEntryMedia { padding-bottom:.4em; }
 
-.browseSuperEntry  { background:#FFFFFF url('tile_browsesuperentry.jpg') repeat-x bottom left; border-bottom:1px solid #D3D3D3; margin:0; text-align:center; }
-
-h1.browseSuperEntryTitle { font-size:1.1em; display:inline; }
+.browseSuperEntry  { background:#FFFFFF url('tile_browsesuperentry.jpg') repeat-x bottom left; border-bottom:1px solid #D3D3D3; margin:0; text-align:center; font-size:1.1em;}
 
 .button { white-space:nowrap;  }
 
@@ -820,6 +818,8 @@ table.reserveBibs { margin:25px 0 20px 15%; width:65%; }
 .reviewDate { color:#767C70; }
 
 .reviewLinks { font-size:1em; margin:0 0 4px 8px; }
+
+.rrUserQuery { color:#457029; }
 
 #bibDisplayBody .reviewLinks a:link, #bibDisplayBody .reviewLinks a:active, #bibDisplayBody .reviewLinks a:visited  { color:#369699; }
 
