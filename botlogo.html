@@ -4,7 +4,7 @@
 </div><!-- pageContent  -->
 <div style="clear:both"></div>
 </div><!-- fullPage -->
-<!-- Google Book Search viewability API script for bib record--> 
+
 <script type='text/javascript'> 
 // Find all the td elements
 var tdList = document.getElementsByTagName("td");
@@ -75,22 +75,89 @@ if(bibInfo){
 		// Store the td if it holds the label for the OCLC #
 		if(nameAttrib == "gbsLink") {
 			if(bibInfo.thumbnail_url !== undefined) {
-			divList[div].innerHTML = '<img src="' + bibInfo.thumbnail_url + '&zoom=1"><br><a href="' + linkGBS + '" target="_blank" style="text-decoration: none;">' + linkImage + '</a>';
+			divList[div].innerHTML = '<img src="' + bibInfo.thumbnail_url + '&zoom=1">';
 			divList[div].style.display="";
-			} else {
+			} 
+		}
+		if(nameAttrib == "googlebooks") {
 			divList[div].innerHTML = '<a href="' + linkGBS + '" target="_blank" style="text-decoration: none;">' + linkImage + '</a>';
 			divList[div].style.display="";
-			}
-		}	
+		}                
 	}
 }
 </script>
 
 <script type="text/javascript">
 
-// Find all the td elements
+/* Search the record ifno fields for particular labels, assign variables */        
+
+		var tr = document.getElementsByTagName('TR');
+		var isbnnumber = "";
+		for(i = 0; i < tr.length; i++) {
+			var x=tr[i].getElementsByTagName('td');
+                        /* Find "Video" label for the video embed script */
+                        if (x.length == 2 && x[0].innerHTML == "Video") {
+                            video_url = x[1].innerHTML;
+                        } 
+                        /* Find "ISBN" label for the Google Books and bookstore button script */
+			if (x.length == 2 && x[0].innerHTML == "ISBN") {
+			      //Grab the first ISBN
+				isbn_1 = x[1].innerHTML;
+				isbn_1 = isbn_1.replace(/[^\d]+/ig,"");
+				
+				if (isbn_1.length == 13) {
+				   var next_tr= i + 1;
+				   var y=tr[next_tr];
+				   var y_data=y.getElementsByTagName('td');
+				   var isbn_2=y_data[1].innerHTML;
+				   isbn_2 = isbn_2.replace(/[^\d]+/ig,"");
+				}
+			}
+		}
+	  if (isbn_1.length == 13) {
+	       var barnes_isbn = isbn_1;
+	       if (isbn_2.length == 10) {
+		    var amazon_isbn = isbn_2;
+		    var borders_isbn = isbn_2
+	       }
+		    else {
+			 document.getElementById('amazonlink').style.visibility = 'hidden';
+			 document.getElementById('borderslink').style.visibility = 'hidden';
+		    }
+	       
+	  } else if (isbn_1.length == 10) {
+	       var amazon_isbn = isbn_1;
+	       var barnes_isbn = isbn_1;
+	       var borders_isbn = isbn_1;
+	  }
+          
+	  
+        else {
+          
+          }
+           
+      </script>
+
+           <script type="text/javascript">        
+	     document.getElementById("amazonlink").innerHTML = '<a href="http://amazon.com/dp/' + amazon_isbn + '" target="_blank"><img src="https://www.nwmissouri.edu/library/app/AddLinks/amreview_btn.png" class="resourceButton"/></a>';
+	     document.getElementById("barneslink").innerHTML = '<a href="http://search.barnesandnoble.com/booksearch/isbninquiry.asp?EAN=' + barnes_isbn + '" target="_blank"><img src="/screens/barnesandnoble.gif" class="resourceButton"/></a>';
+	     document.getElementById("borderslink").innerHTML = '<a href="http://www.borders.com/online/store/TitleDetail?sku=' + borders_isbn + '" target="_blank"><img src="/screens/borders.gif" class="resourceButton"/></a>';
+      </script>
+           
+<script type="text/javascript">
+        
+        document.getElementById("video").innerHTML = "<embed src='" + video_url + "'></embed>"
+        </script>
+
+
+	   
+      
+      <!-- end of googlebook search -->
+
+<script type="text/javascript">
+<!--
+// Assign a className to style the user's terms in the header;
 var tableList = document.getElementsByTagName("table");
-// Make an array to store the ones with the "bibInfoLabel" class
 browseScreenList =  new Array();
 for (var table = 0; table < tableList.length; table++) {
     // Get the class
@@ -101,10 +168,7 @@ for (var table = 0; table < tableList.length; table++) {
 	if(classAttrib == "browseScreen")  {
 		var chgTitle = 1;
 	}
-}
-//Include user's search terms in RightResult headings 
-<!--
-// Assign a className to style the user's terms in the header;
+    }
 var rrClass = "rrUserQuery";
 
 // If you also want to put the user's terms in the browser title bar, change these 3 variables;
@@ -125,8 +189,7 @@ else {
 		var termID = document.getElementById(termArr[i]);
 		if (!termID) {}
 		else {
-			termID.innerHTML = " &#171; " + rrForm.value + " &#187; ";
-
+			termID.innerHTML = rrForm.value;
 			termID.className = rrClass;
 		}
 	}
@@ -136,14 +199,12 @@ else {
 		else {
 			newval = rrForm.value.replace(/^\s+|\s+$/g,"");
 			newval = newval.replace(/\s/g," AND ");
-			termID.innerHTML = " &#171; " + newval + " &#187; ";
+			termID.innerHTML = newval;
 			termID.className = rrClass;
 		}
 	}
 if (chgTitle == 1) { document.title = lib_or_cat_name + title_suff + "'" + rrForm.value + "'"; }
 }
-
-
 //-->
 </script>
        

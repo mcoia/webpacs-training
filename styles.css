@@ -803,6 +803,12 @@ td.progInfoLabel { color:#767C70; font-weight:bold; padding-right:25px; text-ali
 
 .recordPager a { font-weight:bold; }
 
+.resourceButton {text-align:center;}
+
+.resourceButton img {margin:.5em;border:none;}
+
+#resourceHeader { background:#E7E7E7; color:#767C70; text-align:center; font-weight:bold; height:2.5em; padding-top:1em; margin-bottom:.5em;}
+
 .resourcePager { width:10em; margin-left:auto; }
 
 table.resourceResource { margin:15px; width:95%; }
@@ -944,6 +950,8 @@ div.rssChannelEntries { border:none; background:#FFFFFF; }
 #toplogoMoreNav li:hover ul, li.over ul { visibility:visible; display: block; position: absolute; top: 100%; left: 0; } 
 
 /*End optional dropdown menus*/
+
+#video {text-align:center; margin:1em;}
 
 .volumeSelect fieldset { padding:10px; }
 
