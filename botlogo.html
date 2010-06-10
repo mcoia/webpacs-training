@@ -19,6 +19,10 @@ for (var td = 0; td < tdList.length; td++) {
 	if((classAttrib == "bibInfoLabel") && (tdList[td].innerHTML=="OCLC#")) {
 		gbsList.push(tdList[td]);
 	}
+        // Store the td if it holds the label for the Video #
+        if((classAttrib == "bibInfoLabel") && (tdList[td].innerHTML=="Video")) {
+		videoCell= tdList[td]
+	}
 }
 // Make an array for the numbers in the adjacent tds (probably only one, though)
 var bibnumbers = new Array();
@@ -206,6 +210,13 @@ else {
 if (chgTitle == 1) { document.title = lib_or_cat_name + title_suff + "'" + rrForm.value + "'"; }
 }
 //-->
+</script>
+
+<script>
+//Hide the Video link
+videoRow = videoCell.parentNode
+videoRow.style.display = "none"
+
 </script>
        
 <!-- end botlogo.html file -->

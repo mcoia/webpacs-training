@@ -1,18 +1,37 @@
-<!-- begin toplogo_loggedin.html file -->
+<!-- begin toplogo.html file -->
 <!-- Rel 2009B Example Set -->
 <!-- Updated: 12 Apr 2010 -->
+
+<script type="text/javascript" src='/screens/sms.js'> </script>
+<link rel="search"
+type="application/opensearchdescription+xml"
+title="Library Catalog"
+href="http://mcotrain.umsystem.edu/screens/opensearch.xml"; />
+</head>
 
 <div class="minHeight">
 <div class="fullPage">
 
 <div id="skipNav"><a href="#content" tabindex="1">Skip to content</a></div>
 <div class="topLogo">
-
+	
 <div class="topLinks">
 <ul id="topLinksList">
+<li><a  href="" onclick="window.external.AddSearchProvider('http://mcotrain.umsystem.edu/screens/opensearch.xml')"><span class="buttonTopLinks"><img src="/screens/ico_magnifyingglass.gif" alt=""><span class="buttonTopLinksText">Install search plugin</span></span></a></li> 	
 <li>
 <!--{patronrecord}-->
 </li>
+<li><a href="/" tabindex="120">Log Out</a></li>
+
+<li><a href="" onClick="window.print();" tabindex="115"><span class="buttonTopLinks"><img src="/screens/ico_printer.gif" alt=""><span class="buttonTopLinksText">Print</span></span></li>
+<li><a href="/search/" tabindex="110">New Search</a></li>
+</ul>
+</div>
+
+
+<!-- <div class="topLinks">
+<ul id="topLinksList">
+<li><a  href="" onclick="window.external.AddSearchProvider('http://mcotrain.umsystem.edu/screens/opensearch.xml')"><span class="buttonTopLinks"><img src="/screens/ico_magnifyingglass.gif" alt=""><span class="buttonTopLinksText">Install search plugin</span></span></a></li> 
 <li><a href="/" tabindex="120">Log Out</a></li>
 <li><a href="" onClick="window.print();" tabindex="115"><span class="buttonTopLinks"><img src="/screens/ico_printer.gif" alt=""><span class="buttonTopLinksText">Print</span></span></li>
 <li><a href="/search/" tabindex="110">New Search</a></li>
@@ -20,11 +39,14 @@
 </ul>
 </div>
 
+-->
+
 <div class="topLogoSmall">
-<a href="/" tabindex="10"><img src="/screens/logo_sm.jpg" height="40" width="280" alt="Catalog Home Page"></a>
+<a href="/search/" tabindex="10"><img src="/screens/logo_sm.jpg" height="40" width="280" alt="Catalog Home Page"></a>
 </div>
 
 </div><!--topLogo-->
+
 
 <div class="topMyLibrary">
 <div id="topMyLibraryHeader"><h1>My Library</h1></div>
@@ -34,12 +56,12 @@
 </ul> -->
 
 <ul id="toplogoMoreNav">
-<li><a href="/acquire">Suggest a purchase</a></li>
+<li><a href="/ftlist">Featured Items</a></li>
 <li><a href="/suggest">Leave Comments</a></li>
 
 <!-- Toplogo optional dropdown menus. Uncomment and ensure all links work locally. -->
-<!--
 
+<!--
 	<li id="first">
 		<div><a href="">Your Library</a></div>
 		<ul>
@@ -72,8 +94,8 @@
 		</ul>
 	</li>
 End optional dropdown menus  -->
-
 </ul>
+
 <script type="text/javascript"><!--//--><![CDATA[//><!--
 
 //Enable optional dropdown menu for additional navigation options.
@@ -126,4 +148,4 @@ return false;
 <div class="clear"></div>
 <div class="pageContent"><!-- content container -->
 <a name="content" id="content"></a>
-<!--end toplogo_loggedin.html-->
+<!--end toplogo.html-->
