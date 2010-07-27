@@ -162,9 +162,7 @@ b|o|001|-6c|OCLC#||b|
 b|o|019|-6c|OCLC#||b|
 b|o||-6c|OCLC #||b|
 b|y|856|u|Url||b|
-b|y|[^8]..|u|||b|
-b|y|8[^5].|u|||b|
-b|y|85[^6]|u|||b|
+b|y|901||Video||b|
 b|y||u|Misc Marc||b|
 c|i||a|Identity||b|&nbsp;
 c|C||&|||b|&nbsp;

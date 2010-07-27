@@ -1,27 +1,222 @@
-<!-- TRAIN botlogo updated 080219 lee -->
-<center>
-<table>
-<tr style="vertical-align: top;"> 
-<td> 
-<div style="text-align: center; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #333399; font-size: 95%;">
-<strong>MCO Training Catalog </strong><strong>&middot;</strong> a MOBIUS Library Catalog
-</div>
-</td>
-</tr>
-</table>
-<br />
-<table style="border: 0px; padding: 0px; width: 550px;" cellspacing="0" summary="selectLibrary">
-<tr valign="bottom">
-<td align="center">
-<font color="#333399" face="Verdana, Arial, Helvetica, sans-serif" size="1">
-<a href="/search~S1">Avila</a> &nbsp; &#183; &nbsp; 
-<a href="/search~S2">Blue River</a>&nbsp; &#183; &nbsp; 
-<a href="/search~S3">Longview</a> &nbsp; &#183; &nbsp; 
-<a href="/search~S4">Maple Woods</a> &nbsp; &#183; &nbsp; 
-<a href="/search~S5">Penn Valley</a> &nbsp; &#183; &nbsp; 
-<a href="/search~S6">William Jewell</a></font>
-</td>
-</tr>
-</table>
-</center>
-<br />
+<!-- begin botlogo.html file -->
+<!-- Rel 2009B Example Set -->
+<!-- Updated: Sept 2009 -->
+</div><!-- pageContent  -->
+<div style="clear:both"></div>
+</div><!-- fullPage -->
+
+<script type='text/javascript'> 
+// Find all the td elements
+var tdList = document.getElementsByTagName("td");
+// Make an array to store the ones with the "bibInfoLabel" class
+gbsList =  new Array();
+for (var td = 0; td < tdList.length; td++) {
+    // Get the class
+	classAttrib = tdList[td].getAttribute("class");
+	// Hack for IE
+	if(classAttrib == null) { classAttrib = tdList[td].getAttribute("className") }
+	// Store the td if it holds the label for the OCLC #
+	if((classAttrib == "bibInfoLabel") && (tdList[td].innerHTML=="OCLC#")) {
+		gbsList.push(tdList[td]);
+	}
+        // Store the td if it holds the label for the Video #
+        if((classAttrib == "bibInfoLabel") && (tdList[td].innerHTML=="Video")) {
+		videoCell= tdList[td]
+	}
+}
+// Make an array for the numbers in the adjacent tds (probably only one, though)
+var bibnumbers = new Array();
+for (var bib = 0; bib < gbsList.length; bib++) {
+	// for IE
+	bookid = gbsList[bib].nextSibling.nextSibling;
+	// otherwise
+	if(bookid == null){
+		bookid = gbsList[bib].nextSibling
+	}
+	// Remove leading and trailing newlines from the numbers
+	bookid = bookid.innerHTML.replace(/^\s+|\s+$/g,"");
+	// Prefix the number with the label that GBS needs and store it
+	if(bookid.length > 0) {
+		bibnumbers[bib] = "OCLC:" + bookid;
+	}
+}
+ 
+// Construct the URL for the remote GBS script
+var bibapi_url ="http://books.google.com/books?jscmd=viewapi&bibkeys=" + bibnumbers.join(",");
+// Construct an inline javascript invocation of the remote GBS script
+var bibScriptLine = "%3Cscript src='" + bibapi_url + "' type='text/javascript'%3E%3C/script%3E";
+// Insert the line of script into this page so it returns the _GBSBookInfo object
+document.write(unescape(bibScriptLine));
+</script> 
+<script type='text/javascript'> 
+// Resuming the original script, add the link if the lookup succeeded
+// Just look up the first OCLC number, don't worry about any others
+var bibInfo = _GBSBookInfo[bibnumbers[0]];
+// HTML for images
+offsiteImg = '<img src="/screens/icon_offsite_blue.gif" alt="offsite" title="offsite" style="border: 0pt none ; vertical-align: middle;"> ';
+gbsPreviewImg = '<img src="/screens/gbs_preview_button1.gif" alt="Preview" title="Preview" style="border: 0pt none ; vertical-align: middle;"> ';
+if(bibInfo){
+	// Set text and link values depending on viewablity
+	if(bibInfo.preview == "full") { 
+		linkGBS = bibInfo.preview_url;
+		linkImage = gbsPreviewImg;
+	}
+	if(bibInfo.preview == "partial") { 
+		linkGBS = bibInfo.preview_url;
+		linkImage = gbsPreviewImg;
+	}
+	if(bibInfo.preview == "noview") { 
+		linkGBS = bibInfo.info_url;
+		linkImage = gbsPreviewImg;
+	}
+	// Rewrite the HTML inside the "gbsLink" <div> element
+	var divList = document.getElementsByTagName("div");
+    for (var div = 0; div < divList.length; div++) {
+	    // Get the class
+		nameAttrib = divList[div].getAttribute("name");
+		// Hack for IE
+		if(nameAttrib == null) { nameAttrib = divList[div].getAttribute("className") }
+		// Store the td if it holds the label for the OCLC #
+		if(nameAttrib == "gbsLink") {
+			if(bibInfo.thumbnail_url !== undefined) {
+			divList[div].innerHTML = '<img src="' + bibInfo.thumbnail_url + '&zoom=1">';
+			divList[div].style.display="";
+			} 
+		}
+		if(nameAttrib == "googlebooks") {
+			divList[div].innerHTML = '<a href="' + linkGBS + '" target="_blank" style="text-decoration: none;">' + linkImage + '</a>';
+			divList[div].style.display="";
+		}                
+	}
+}
+</script>
+
+<script type="text/javascript">
+
+/* Search the record ifno fields for particular labels, assign variables */        
+
+		var tr = document.getElementsByTagName('TR');
+		var isbnnumber = "";
+		for(i = 0; i < tr.length; i++) {
+			var x=tr[i].getElementsByTagName('td');
+                        /* Find "Video" label for the video embed script */
+                        if (x.length == 2 && x[0].innerHTML == "Video") {
+                            video_url = x[1].innerHTML;
+                        } 
+                        /* Find "ISBN" label for the Google Books and bookstore button script */
+			if (x.length == 2 && x[0].innerHTML == "ISBN") {
+			      //Grab the first ISBN
+				isbn_1 = x[1].innerHTML;
+				isbn_1 = isbn_1.replace(/[^\d]+/ig,"");
+				
+				if (isbn_1.length == 13) {
+				   var next_tr= i + 1;
+				   var y=tr[next_tr];
+				   var y_data=y.getElementsByTagName('td');
+				   var isbn_2=y_data[1].innerHTML;
+				   isbn_2 = isbn_2.replace(/[^\d]+/ig,"");
+				}
+			}
+		}
+	  if (isbn_1.length == 13) {
+	       var barnes_isbn = isbn_1;
+	       if (isbn_2.length == 10) {
+		    var amazon_isbn = isbn_2;
+		    var borders_isbn = isbn_2
+	       }
+		    else {
+			 document.getElementById('amazonlink').style.visibility = 'hidden';
+			 document.getElementById('borderslink').style.visibility = 'hidden';
+		    }
+	       
+	  } else if (isbn_1.length == 10) {
+	       var amazon_isbn = isbn_1;
+	       var barnes_isbn = isbn_1;
+	       var borders_isbn = isbn_1;
+	  }
+          
+	  
+        else {
+          
+          }
+           
+      </script>
+
+           <script type="text/javascript">        
+	     document.getElementById("amazonlink").innerHTML = '<a href="http://amazon.com/dp/' + amazon_isbn + '" target="_blank"><img src="https://www.nwmissouri.edu/library/app/AddLinks/amreview_btn.png" class="resourceButton"/></a>';
+	     document.getElementById("barneslink").innerHTML = '<a href="http://search.barnesandnoble.com/booksearch/isbninquiry.asp?EAN=' + barnes_isbn + '" target="_blank"><img src="/screens/barnesandnoble.gif" class="resourceButton"/></a>';
+	     document.getElementById("borderslink").innerHTML = '<a href="http://www.borders.com/online/store/TitleDetail?sku=' + borders_isbn + '" target="_blank"><img src="/screens/borders.gif" class="resourceButton"/></a>';
+      </script>
+           
+<script type="text/javascript">
+        
+        document.getElementById("video").innerHTML = "<embed src='" + video_url + "'></embed>"
+        </script>
+
+
+	   
+      
+      <!-- end of googlebook search -->
+
+<script type="text/javascript">
+<!--
+// Assign a className to style the user's terms in the header;
+var tableList = document.getElementsByTagName("table");
+browseScreenList =  new Array();
+for (var table = 0; table < tableList.length; table++) {
+    // Get the class
+	classAttrib = tableList[table].getAttribute("class");
+	// Hack for IE
+	if(classAttrib == null) { classAttrib = tableList[table].getAttribute("className") }
+	// Store the table if it holds the label for the OCLC #
+	if(classAttrib == "browseScreen")  {
+		var chgTitle = 1;
+	}
+    }
+var rrClass = "rrUserQuery";
+
+// If you also want to put the user's terms in the browser title bar, change these 3 variables;
+var lib_or_cat_name = "Training Catalog - "; // This is your library name or catalog name, and should match whatever currently appears in your browser's title bar;
+var title_suff = " search results for " // This text will appear in the title bar after the user's terms;
+
+// No need to edit beyond here;
+if (!document.getElementsByName('searcharg')[0]) {}
+else {
+	var rrForm = document.getElementsByName('searcharg')[0];
+	var termArr = [];
+	termArr[0] = "rrTerm1";
+	termArr[1] = "rrTerm2";
+	termArr[2] = "rrTerm3";
+	termArr[3] = "rrTerm4";
+	termArr[4] = "rrTerm5";
+	for (var i=0; i<3; i++) {
+		var termID = document.getElementById(termArr[i]);
+		if (!termID) {}
+		else {
+			termID.innerHTML = rrForm.value;
+			termID.className = rrClass;
+		}
+	}
+	for (var i=3; i<termArr.length; i++) {
+		var termID = document.getElementById(termArr[i]);
+		if (!termID) {}
+		else {
+			newval = rrForm.value.replace(/^\s+|\s+$/g,"");
+			newval = newval.replace(/\s/g," AND ");
+			termID.innerHTML = newval;
+			termID.className = rrClass;
+		}
+	}
+if (chgTitle == 1) { document.title = lib_or_cat_name + title_suff + "'" + rrForm.value + "'"; }
+}
+//-->
+</script>
+
+<script>
+//Hide the Video link
+videoRow = videoCell.parentNode
+videoRow.style.display = "none"
+
+</script>
+       
+<!-- end botlogo.html file -->

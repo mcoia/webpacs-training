@@ -1,19 +1,134 @@
-<!-- MCOTRAIN STAGING toplogo.html udated 080509 lee -->
-<center>
-<table width="85%" border="0" cellspacing="0" cellpadding="0" summary="toplogo">
-<tr>
-<td nowrap width="1%" height="1">
-<img src="/screens/shim.gif" height="1" width="1" border="0" alt=""></td>
-<td rowspan="4" width="98%"></td>
-<td rowspan="4" width="1%"><a href="/">
-<img src="/screens/080208_mobiustrain_rev.jpg" height="64" width="178" alt="" border="0"></a></td>
-</tr>
-<tr>
-<td style="vertical-align: top; width: 1%; color: #333399; font-size: 95%; font-face: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; white-space: nowrap;">
-<a href="http://mobius.missouri.edu/search" style="text-decoration:none">MOBIUS</a> &gt; 
-<a href="/" style="text-decoration:none">MCO Training Home</a> &gt; MCO Training Catalog</td>
-</tr>
-</table>
-</center>
-<br />
-
+<!-- begin toplogo.html file -->
+<!-- Rel 2009B Example Set -->
+<!-- Updated: 12 Apr 2010 -->
+
+<script type="text/javascript" src='/screens/sms.js'> </script>
+<link rel="search"
+type="application/opensearchdescription+xml"
+title="Library Catalog"
+href="http://mcotrain.umsystem.edu/screens/opensearch.xml"; />
+</head>
+
+<div class="minHeight">
+<div class="fullPage">
+
+<div id="skipNav"><a href="#content" tabindex="1">Skip to content</a></div>
+<div class="topLogo">
+
+<div class="topLinks">
+<ul id="topLinksList">
+<li><a  href="" onclick="window.external.AddSearchProvider('http://mcotrain.umsystem.edu/screens/opensearch.xml')"><span class="buttonTopLinks"><img src="/screens/ico_magnifyingglass.gif" alt=""><span class="buttonTopLinksText">Install search plugin</span></span></a></li> 
+<li><a href="/patroninfo" tabindex="120">Login</a></li>
+<li><a href="" onClick="window.print();" tabindex="115"><span class="buttonTopLinks"><img src="/screens/ico_printer.gif" alt=""><span class="buttonTopLinksText">Print</span></span></li>
+<li><a href="/search/" tabindex="110">New Search</a></li>
+</ul>
+</div>
+
+<div class="topLogoSmall">
+<a href="/search/" tabindex="10"><img src="/screens/logo_sm.jpg" height="40" width="280" alt="Catalog Home Page"></a>
+</div>
+
+</div><!--topLogo-->
+
+
+<div class="topMyLibrary">
+<div id="topMyLibraryHeader"><h1>My Library</h1></div>
+<!--<ul id="topMyLibraryList">
+<li><a href="/acquire">Suggest a purchase</a></li>
+<li><a href="/suggest">Leave Comments</a></li>
+</ul> -->
+
+<ul id="toplogoMoreNav">
+<li><a href="/ftlist">Featured Items</a></li>
+<li><a href="/suggest">Leave Comments</a></li>
+
+<!-- Toplogo optional dropdown menus. Uncomment and ensure all links work locally. -->
+
+<!--
+	<li id="first">
+		<div><a href="">Your Library</a></div>
+		<ul>
+			<li><a href="/selfreg">Create an account</a></li>
+			<li><a href="/libinfo">About the library</a></li>
+		</ul>
+	</li>
+
+	<li>
+		<div><a href="">Help Topics</a></div>
+		<ul>
+			<li><a href="/help#searching">Searching</a></li>
+			<li><a href="/help#searchtips">Advanced Keyword Search Tips</a></li>
+			<li><a href="/help#prefsearch">Saving your searches</a></li>
+			<li><a href="/help#renewals">Renewals</a></li>
+			<li><a href="/help#feepay">Fee Payment</a></li>
+			<li><a href="/help#rpro">Research Pro</a></li>
+			<li><a href="/help#programs">Library Events and Community Programs</a></li>
+		</ul>
+	</li>
+
+	<li id="last">
+		<div><a href="">Features</a></div>
+		<ul>
+			<li><a href="http://example.org/iii/encore">Search Encore</a></li>
+			<li><a href="/iii/calendar/month">Program Calendar</a></li>
+			<li><a href="/search/y">Find e-resources</a></li>
+			<li><a href="/rpro">Research Pro</a></li>
+            <li><a href="/illb">Inter-Library Loan</a></li>
+		</ul>
+	</li>
+End optional dropdown menus  -->
+</ul>
+
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+//Enable optional dropdown menu for additional navigation options.
+if (document.all&&document.getElementById) {
+	navRoot = document.getElementById("toplogoMoreNav");
+	for (i=0; i<navRoot.childNodes.length; i++) {
+		node = navRoot.childNodes[i];
+		if (node.nodeName=="LI") {
+			node.onmouseover=function() {
+				this.className+=" over";
+			}
+			node.onmouseout=function() {
+				this.className=this.className.replace(" over", "");
+			}
+		}
+	}
+}
+
+//--><!]]></script>
+
+</div><!--myLibrary-->
+<div class="topNavClear"></div>
+
+<div class="searchNav">
+<script language="JavaScript"> 
+<!--
+function GotoURL() { 
+//top.location.href = dl.specializedSearch.options[dl.specializedSearch.selectedIndex].value;
+window.location.assign(document.getElementById("specializedSearch").value);
+return false;
+} 
+// -->
+</script>
+<div id="searchNavMenu">
+<select name="specializedSearch" id="specializedSearch">
+<option selected="selected" value=" ">(Specialized Searches)</option>
+<option value="/search/X">Advanced</option>
+<option value="/search/a">Author</option>
+<option value="/search/t">Title</option>
+<option value="/search/d">Subject</option>
+<option value="/search/c">Call Number</option>
+<!--<option value="/programs">Program</option> -->
+<!--<option value="/search/i">ISBN</option> -->
+<!--<option value="search/q">Author and Title</option> -->
+</select>
+<input type="image" src="/screens/ico_go.gif" class="searchNavBut" value="Go" onclick="GotoURL();" >
+</div>
+
+</div><!--searchNav-->
+<div class="clear"></div>
+<div class="pageContent"><!-- content container -->
+<a name="content" id="content"></a>
+<!--end toplogo.html-->

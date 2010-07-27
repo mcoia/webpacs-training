@@ -1,85 +1,149 @@
-<!-- TRAIN bib_display.html updated 080219 lee -->
 <!--{toplogo}-->
-<!--{patron}-->
-<!--{logout}-->
-<br />
-<br />
 <!--{ifbibdisplay}-->
 <!--{xif}-->
-<div class="navigationRow" align="center">
+<!--{catedit}-->
+
+<div id="bibDisplayBody">
+<div class="navigationRowRecord">
 <!--{navrow}-->
-<!--{innreach}-->
-<br />
-<!--{searchhistory}-->
-<br />
 </div>
-<div class="bibSearchtool" align="center">
+<div id="bibDisplayContent">
+<div class="bibSearch">
 <!--{searchtool}-->
+<div class="bibSearchHistory">
+<!--{searchhistory}-->
+</div>
+</div><!-- bibSearch -->
+
+<div class="bibPager">
+<!--{pager}-->
+</div>
+
+<div class="bibClear"></div>
+
+<div class="bibResourceSidebar">
+    <!--{ifhasresourcetable}-->
+    <!--{resourcetable}-->
+    <!--{xif}-->
+ 
+<div id="resourceHeader">Resources</div>
+
+  
+<div id="googlebooks" name="googlebooks" class="resourceButton"></div>
+<div id="amazonlink" class="resourceButton"></div>
+<div id="barneslink" class="resourceButton"></div>
+<div id="borderslink" class="resourceButton"></div>
+<a href="#here" name=smsbutton id=smsbutton onClick="showsms();return false;">
+<div id="smsfeatures" class="resourceButton">
+    <span class="button">
+    <img src="/screens/ico_phone.gif" border=0 style="margin:0">
+        <span class="buttonText">Text item location</span>
+    </span>
+    </div>
+    
+</a>    
+
+    
+    
+<!--Optional INNReach resources.-->
+<!--{innreach}-->
 <!--{relsearch}-->
 </div>
-<!--{reslink}-->
-<br />
-<div class="bibPager" align="center">
-<!--{pager}-->
-<br />
+
+<div class="bibDisplayJacket">
+<!--{bibimage}-->
+<div id="gbsLink" name="gbsLink""></div>
+
+<div class="bibMedia">
+<!--{media}-->
 </div>
-<!--{recordinfo:atp}-->
+</div>
+
+<div class="bibDisplayContentMain">
+    <!-- just a placeholder for the sms form -->
+    <div id='sms' style="visibility:hidden;display:none">
+    </div>  
+<!--{recordinfo:a}-->
+
+<h1 class="bibDisplayTitle">
+<!--{recordinfo:t}-->
+</h1>
+
+<!--{recordinfo:pR}-->
+
 <!--{ifhaspatrate}-->
-<div class="rateLableWrapper">
+<div class="bibDisplayRatings">
 <!--{ratings}-->
 </div>
 <!--{xif}-->
-<!--{bibimage}-->
-<div class="bibHolds">
-<!--{holds}-->
-</div>
-<!--{linkeddocs}-->
-<!--{URLS}-->
+
+<!--{booking}-->
 <!--{holdingslink}-->
+<div class="testlinkeddocs">
+<!--{linkeddocs}-->
+</div>
+<div class="bibDisplayUrls">
+<!--{URLS}-->
+</div>
+
 <!--{bloblinks}-->
 <!--{imagelinks}-->
 <!--{artthumb}-->
-<!--{booking}-->
-<!--{holdings}-->
-<div style="margin:5px;">
-<!--{items}-->
-<br />
-<br />
-</div>
-<!--{orders}-->
-<div>
-<!--{recordlink}-->
-</div> 
-<!--{recordinfo:ercsndjbuxzwi}-->
+<!--{xmlframe}-->
 <!--{ifTOC}-->
 <!--{TOC}-->
 <!--{xif}-->
-<!--{ifhasresourcetable}-->
-<!--{resourcetable}-->
-<!--{xif}-->
-<!--{patronreviews}-->
+<!--{holds}-->
+<!--{holdings}-->
+ 
+<div class="bibDisplayItems">
+<div class="bibDisplayItemsHeader"><h2>Copies</h2></div>
+<div class="bibDisplayItemsMain">   
+<!--{items}-->
+<div id="video"></div>   
+    <!-- a quick script to hide the SMS menu if there are no items. same as the javascript in the SMS form, but it's really just to see if the items exist.  If they don't, we hide the buttons -->
+       <script>
+       var f = document.getElementById('bib_detail');
+       try { 
+        var itms = document.getElementById('bib_items');
+        var tr = itms.getElementsByTagName('TR');
+        for(i = 1; i < tr.length; i++) {
+         var x=tr[i].getElementsByTagName('TD');
+         if (x.length == 3) {
+          var loc = x[0].innerHTML.replace(/(<([^>]+)>|&nbsp;)/ig,"");
+          var call = x[1].innerHTML.replace(/(<([^>]+)>|&nbsp;)/ig,"");
+          var status = x[2].innerHTML.replace(/(<([^>]+)>|&nbsp;)/ig,"");
+         }
+        }
+       } catch (e) {
+         document.getElementById('smsfeatures').style.visibility='hidden';
+       }
+
+    </script>
+            
+</div>
+</div>
+</div>
+
+
+
+<!--{orders}-->
+
+<div class="bibDisplayContentMore"> 
+<!--{recordinfo:#}-->
+</div>
+<div class="bibDisplayContentMore bibDisplayReviews">
+<div class="bibDisplayPermLink actionButtonArea">
+<!--{recordlink}-->
+</div>
 <!--{patronreviewsfull}-->
-<!--{xmlframe}-->
-<!--{catedit}-->
-<br />
-<br />
-<div class="bibPager" align="center">
-<!--{pager}-->
-<br />
 </div>
-<div class="navigationRow" align="center">
-<!--{navrow}-->
-<!--{innreach}-->
 </div>
+
+</div><!-- close bibDisplayContent -->
+<div class="clear"></div>
+</div><!-- close bibDisplayBody -->
+
+
+
 <!--{botlogo}-->
-
-
-
-
-
-
-
-
-
-
-

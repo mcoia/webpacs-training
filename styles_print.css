@@ -1,0 +1,79 @@
+a:link, a:visited {background:#FFF; color:#000; text-decoration:underline; font-weight:bold;}
+
+#bibDisplayBody a:link, #bibDisplayBody a:visited, #formLinks a:link, #formLinks a:visited {background:transparent; color:#000; text-decoration:underline; font-weight:bold;}
+  
+body { color:#000; background-color:#FFF; background-image:none; font-family:Times New Roman,Times,Georgia,serif; font-size:16pt; }
+
+img { border:0; }
+
+td { color:#000; background-color:#FFF; background-image:none; font-family:Times New Roman,Times,Georgia,serif; font-size:16pt; }
+
+table.browseScreen td { width:18%; }
+
+.bibPager, .bibResourceSidebar, .bibSearch, .briefcitMark, .briefcitRequest, .browseSaveJump, .browseSearchtool, .browseResourceTable, .buttonSpriteDiv, .clear, .navigationRow, .patActionsLinks, .searchNav, #skipNav, .topMyLibrary, .topLinks { display:none; }
+
+.patActionsLinks, .patTop, .patFuncArea { border:0; }
+
+.patFloat { background-image:none; }
+
+.patFuncArea { float:none; margin-top:1em; width:auto; }
+
+table.patFunc { width:7.5in; }
+
+#bibDisplayBody div[align="center"] { display:none; }
+
+#bibDisplayContent { display:block !important; }
+
+.bibDisplayJacket, .bibMedia { width: 100px; }
+
+.bibItems td, .bibItems a { background-color:transparent; }
+
+.bibDisplayItemsHeader h2 { color:#767C70; }
+
+th.bibItemsHeader { color:#000000; font-family:Times New Roman,Times,Georgia,serif; font-size:16pt; }
+
+.briefcitCell { width:100%; }
+
+.briefcitDetail a { background-color:transparent; }
+
+.briefcitDetail, .briefcitAuthDetail { width:85%; }
+
+.briefcitItems h2 { color:#000000; }
+
+.briefcitRow { margin:5px 0; }
+
+h2.briefcitTitle { font-size:16pt; }
+
+.browseScreen > tbody > tr > td { width:0; }
+
+.browseScreen > tbody > tr > td:first-child { width:100%; }
+
+.browsepager { padding-top:0; }
+
+.browsePager { padding-top:0; }
+
+.browsePager a { display:none; }
+
+.browsePager strong  {}
+
+.briefcitCell { font-size:16pt; }
+
+.briefcitMedia { margin-top:20px; }
+
+.helpTopics { display:none; }
+
+.helpContent #formLinks { display:none; }
+
+.loggedInMessage { display:none; }
+
+.patFunc a { background:transparent; }
+
+.patFuncHeaders { text-align:left; }
+
+tr.patFuncHeaders { border-bottom:1px solid #888888; }
+
+.patFuncRating { text-align:left; }
+
+.resourcePager { display:none; }
+
+.topLogoSmall img { border:0; height:.25in; width:1.75in; }
