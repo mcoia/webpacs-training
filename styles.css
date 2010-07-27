@@ -508,7 +508,7 @@ div .bibResourceSidebar { display:none; }
 
 .form2Part formLabel, .form1Part formLabel { font-size:.8824em; }
 
-.form3Part fieldset { padding:5px; }
+.form3Part fieldset { padding:10px; }
 
 .form3Part  { background:#F2F2F2; border:1px solid #D3D3D3; float:left; margin:0 20px 15px 0; }
 
