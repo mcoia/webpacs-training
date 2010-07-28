@@ -1,12 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Rel 2009B Example Set -->
-<!-- Updated: 29 Apr 2010 -->
+<!-- Updated: 09 June 2010 -->
 <head>
 <title>Millennium Web Catalog</title>
 <meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
 <link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
-<link rel="stylesheet" type="text/css" href="/screens/stylesmain.css" >
+<!--<link rel="stylesheet" type="text/css" href="/screens/stylesmain.css" > Un-comment to offer a larger logo on mainmenu.-->
+</head>
 <body>
 <!--{toplogo}-->
 
@@ -27,16 +28,12 @@
 <div class="formEntryArea">
 <label for="searchtype" class="accessibleAddInfo">Search type</label>
 <select name="searchtype" id="searchtype">
-<option value="X" selected="selected"> Keyword</option>
-<option value="t"> Title</option>
-<option value="a"> Author</option>
-<option value="d"> Subject</option>
-<option value="h"> Journal Title</option>
-<option value="c"> LC Call #</option>
-<option value="g"> Govt Doc #</option>
-<option value="i"> ISBN/ISSN</option>
-<!--<option value="y"> Resource Name</option> -->
-<!--<option value="m"> Resource Subject</option> -->
+<option value="X" selected="selected">Keyword</option>
+<option value="t">Title</option>
+<option value="s">Journal Title</option>
+<option value="a">Author</option>
+<option value="d">Subject</option>
+<option value="y">Resource Name</option>
 </select>
 <!--{nosort}-->
 <label for="searcharg" class="accessibleAddInfo">Search term</label>
@@ -45,17 +42,46 @@
 <!--{scope}-->
 <span class="nowrap formButtonArea">
 
-<!--{submit}-->
+  <!--{submit}-->
 
-<!--<a href="#" onclick="iiiDoSubmit_1();">
-<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonBlankDiv"><span class="buttonBlankSpan1"><span class="buttonBlankSpan2">Submit</span></span></div></div>
-</a> -->
+<script language="javascript">
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+obj.submit();
+}
+</script>
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
+
+<input type="submit" style="display:none">
+
 </span>
 </div><!-- formEntryArea -->
 <!--</fieldset> optional-->
 </form>
 </div><!-- browseSearchtool -->
 </div><!-- form1Part -->
+
+<div class="mainMenuContent">
+<div class="mainMenuContentLeft">
+<img src="/screens/main.jpg" height=249 width=355>
+</div>
+<div class="mainMenuContentRight">
+<ul>
+<li><a href="[encore IP/iii/encore]">Search Encore</a></li>
+<li><a href="/iii/calendar/month">Program Calendar</a></li>
+<li><a href="/ftlist">Featured Lists</a></li>
+<li><a href="/rpro">Research Pro</a></li>
+<li><a href="/search/y">Find e-resources</a></li>
+<li><a href="/illb">Interlibrary Loan</a></li>
+<li><a href="[WebPAC IP:2090]">KidsOnline</a></li>
+</ul>
+</div>
+</div>
+
 
 </div><!--pageContentInner -->
 
