@@ -2,6 +2,13 @@
 <!-- Rel 2009B Example Set -->
 <!-- Updated: 12 Apr 2010 -->
 
+<script type="text/javascript" src='/screens/sms.js'> </script>
+<link rel="search"
+type="application/opensearchdescription+xml"
+title="Library Catalog"
+href="http://mcotrain.umsystem.edu/screens/opensearch.xml"; />
+</head>
+
 <div class="minHeight">
 <div class="fullPage">
 
@@ -10,15 +17,15 @@
 
 <div class="topLinks">
 <ul id="topLinksList">
+<li><a  href="" onclick="window.external.AddSearchProvider('http://mcotrain.umsystem.edu/screens/opensearch.xml')"><span class="buttonTopLinks"><img src="/screens/ico_magnifyingglass.gif" alt=""><span class="buttonTopLinksText">Install search plugin</span></span></a></li> 
 <li><a href="/patroninfo" tabindex="120">Login</a></li>
-<li><a href="/help" tabindex="115">Help</a></li>
-<li><a href="" onClick="window.print();" tabindex="110"><span class="buttonTopLinks"><img src="/screens/ico_printer.gif" alt=""><span class="buttonTopLinksText">Print</span></span></li>
-<li><a href="/search/" tabindex="105">New Search</a></li>
+<li><a href="" onClick="window.print();" tabindex="115"><span class="buttonTopLinks"><img src="/screens/ico_printer.gif" alt=""><span class="buttonTopLinksText">Print</span></span></li>
+<li><a href="/search/" tabindex="110">New Search</a></li>
 </ul>
 </div>
 
 <div class="topLogoSmall">
-<a href="/" tabindex="10"><img src="/screens/logo_sm.jpg" height="40" width="280" alt="Catalog Home Page"></a>
+<a href="/search/" tabindex="10"><img src="/screens/logo_sm.jpg" height="40" width="280" alt="Catalog Home Page"></a>
 </div>
 
 </div><!--topLogo-->
@@ -26,22 +33,23 @@
 
 <div class="topMyLibrary">
 <div id="topMyLibraryHeader"><h1>My Library</h1></div>
+<!--<ul id="topMyLibraryList">
+<li><a href="/acquire">Suggest a purchase</a></li>
+<li><a href="/suggest">Leave Comments</a></li>
+</ul> -->
 
 <ul id="toplogoMoreNav">
-<!-- Toplogo alt links. -->
-<!--<li><a href="/acquire">Suggest a purchase</a></li>
+<li><a href="/ftlist">Featured Items</a></li>
 <li><a href="/suggest">Leave Comments</a></li>
--->
 
-<!-- Dropdown menus -->
+<!-- Toplogo optional dropdown menus. Uncomment and ensure all links work locally. -->
+
+<!--
 	<li id="first">
-		<div><a href="">My Library</a></div>
+		<div><a href="">Your Library</a></div>
 		<ul>
-            <li><a href="/patroninfo">My Account</a></li>
-            <!--<li><a href="/selfreg">Create an account</a></li> -->
-            <li><a href="/libinfo">About the library</a></li>
-            <li><a href="/acquire">Suggest a purchase</a></li>
-            <li><a href="/suggest">Comments</a></li>
+			<li><a href="/selfreg">Create an account</a></li>
+			<li><a href="/libinfo">About the library</a></li>
 		</ul>
 	</li>
 
@@ -57,20 +65,18 @@
 			<li><a href="/help#programs">Library Events and Community Programs</a></li>
 		</ul>
 	</li>
-<!--
+
 	<li id="last">
 		<div><a href="">Features</a></div>
 		<ul>
-            <li><a href="<encore IP/iii/encore>">Search Encore</a></li>
-            <li><a href="/iii/calendar/month">Program Calendar</a></li>
-            <li><a href="/ftlist">Featured Lists</a></li>
-            <li><a href="/rpro">Research Pro</a></li>
-            <li><a href="/search/y">Find e-resources</a></li>
-            <li><a href="/illb">Interlibrary Loan</a></li>
+			<li><a href="http://example.org/iii/encore">Search Encore</a></li>
+			<li><a href="/iii/calendar/month">Program Calendar</a></li>
+			<li><a href="/search/y">Find e-resources</a></li>
+			<li><a href="/rpro">Research Pro</a></li>
+            <li><a href="/illb">Inter-Library Loan</a></li>
 		</ul>
-	</li> -->
-<!-- End dropdown menus -->    
-    
+	</li>
+End optional dropdown menus  -->
 </ul>
 
 <script type="text/javascript"><!--//--><![CDATA[//><!--
@@ -108,19 +114,15 @@ return false;
 </script>
 <div id="searchNavMenu">
 <select name="specializedSearch" id="specializedSearch">
-<option selected="selected" value=" ">(More Searches)</option>
-<option value="/search/X">Advanced Keyword</option>
-<option value="/search/t">Title</option>
-<option value="/search/s">Journal Title</option>
+<option selected="selected" value=" ">(Specialized Searches)</option>
+<option value="/search/X">Advanced</option>
 <option value="/search/a">Author</option>
+<option value="/search/t">Title</option>
 <option value="/search/d">Subject</option>
-<option value="/search/y">Resource Name</option>
 <option value="/search/c">Call Number</option>
-<option value="/search/i">ISBN</option>
-<option value="/search/g">Government Document #</option>
-<option value="/search/q">Author and Title</option>
-<!--<option value="/search/p">Instructor</option>
-<option value="/search/r">Course</option> -->
+<!--<option value="/programs">Program</option> -->
+<!--<option value="/search/i">ISBN</option> -->
+<!--<option value="search/q">Author and Title</option> -->
 </select>
 <input type="image" src="/screens/ico_go.gif" class="searchNavBut" value="Go" onclick="GotoURL();" >
 </div>
