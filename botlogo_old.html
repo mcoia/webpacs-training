@@ -5,18 +5,6 @@
 <div style="clear:both"></div>
 </div><!-- fullPage -->
 
-<script type="text/javascript">
-
-
-
-function delayedRedirect(){
-    window.location = "/"
-    }
-
-window.onload = setTimeout(delayedRedirect,100000)
-
-</script>
-
 <script type='text/javascript'> 
 // Find all the td elements
 var tdList = document.getElementsByTagName("td");
@@ -30,10 +18,6 @@ for (var td = 0; td < tdList.length; td++) {
 	// Store the td if it holds the label for the OCLC #
 	if((classAttrib == "bibInfoLabel") && (tdList[td].innerHTML=="OCLC#")) {
 		gbsList.push(tdList[td]);
-	}
-        // Store the td if it holds the label for the Video #
-        if((classAttrib == "bibInfoLabel") && (tdList[td].innerHTML=="Video")) {
-		videoCell= tdList[td]
 	}
 }
 // Make an array for the numbers in the adjacent tds (probably only one, though)
@@ -171,9 +155,10 @@ if(bibInfo){
       <!-- end of googlebook search -->
 
 <script type="text/javascript">
-<!--
-// Assign a className to style the user's terms in the header;
+
+// Find all the td elements
 var tableList = document.getElementsByTagName("table");
+// Make an array to store the ones with the "bibInfoLabel" class
 browseScreenList =  new Array();
 for (var table = 0; table < tableList.length; table++) {
     // Get the class
@@ -184,7 +169,13 @@ for (var table = 0; table < tableList.length; table++) {
 	if(classAttrib == "browseScreen")  {
 		var chgTitle = 1;
 	}
-    }
+        if(classAttrib == "bibTOC") {
+                 var 970field = 1;
+        }
+}
+//Include user's search terms in RightResult headings 
+<!--
+// Assign a className to style the user's terms in the header;
 var rrClass = "rrUserQuery";
 
 // If you also want to put the user's terms in the browser title bar, change these 3 variables;
@@ -205,7 +196,8 @@ else {
 		var termID = document.getElementById(termArr[i]);
 		if (!termID) {}
 		else {
-			termID.innerHTML = rrForm.value;
+			termID.innerHTML = " &#171; " + rrForm.value + " &#187; ";
+
 			termID.className = rrClass;
 		}
 	}
@@ -215,20 +207,16 @@ else {
 		else {
 			newval = rrForm.value.replace(/^\s+|\s+$/g,"");
 			newval = newval.replace(/\s/g," AND ");
-			termID.innerHTML = newval;
+			termID.innerHTML = " &#171; " + newval + " &#187; ";
 			termID.className = rrClass;
 		}
 	}
 if (chgTitle == 1) { document.title = lib_or_cat_name + title_suff + "'" + rrForm.value + "'"; }
 }
+
+
+
 //-->
-</script>
-
-<script>
-//Hide the Video link
-videoRow = videoCell.parentNode
-videoRow.style.display = "none"
-
 </script>
        
 <!-- end botlogo.html file -->
