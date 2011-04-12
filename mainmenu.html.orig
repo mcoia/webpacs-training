@@ -35,6 +35,13 @@
 <option value="c"> LC Call #</option>
 <option value="g"> Govt Doc #</option>
 <option value="i"> ISBN/ISSN</option>
+<<<<<<< HEAD
+=======
+<option value="o"> OCLC #</option>
+<option value="s"> Journal Title</option>
+<option value="e"> Dewey Call #</option>
+<option value="m"> Children's Subject</option>
+>>>>>>> 8eb414ad60116f513d963adac106a03eb785de68
 <!--<option value="y"> Resource Name</option> -->
 <!--<option value="m"> Resource Subject</option> -->
 </select>
