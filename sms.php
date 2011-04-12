@@ -31,7 +31,7 @@ $item 			= "\nLoc: ".$location."\nCall: ".$callNumber;
 //echo "document.write('Debug: ".$location." ".$callNumber."');";
 
 //Change this url to your own catalog
-$url = "http://janus.uoregon.edu/record=".$bib;
+$url = "http://mcotrain.umsystem.edu/record=".$bib;
 
 //Use the bib number to get the title information for the item from the catalog
 $catalogItemPage = get_url_contents($url);
@@ -46,17 +46,15 @@ if(!strstr($catalogItemPage, $callNumber) || !strstr($catalogItemPage, $location
 }
 
 //defined variables. Set the from address and subject as desired
-$fromAddress 	= 'NoReply@uoregon.edu';
-$subject 		= "UO Library";
+$fromAddress 	= 'NoReply@mcotrain.umsystem.edu';
+$subject 		= "Library Catalog";
 
-$providers = array(	'cingular' 	=> '@cingularme.com',
+$providers = array(	'att' 	        => '@txt.att.net',
              		'tmobile' 	=> '@tmomail.net',
-             		'virgin' 	=> '@vmobl.com',
              		'sprint' 	=> '@messaging.sprintpcs.com',
-             		'nextel' 	=> '@messaging.nextel.com',
              		'verizon'	=> '@vtext.com',
-					'cricket'	=> '@mms.mycricket.com',
-					'qwest'		=> '@qwestmp.com');
+			'uscellular'    => '@email.uscc.net',
+			'northwest'     => '@mynwcell.com');
 
 //remove any non-numeric characters from the phone number
 $number = preg_replace('/[^\d]/', '', $phoneNumber);
