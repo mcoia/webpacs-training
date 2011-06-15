@@ -12,7 +12,7 @@ startTimeout(600000, "/");
 <noscript>
 <meta http-equiv="Refresh" content="600;URL=/" />
 </noscript>
-<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4">
 <link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
 <link rel="stylesheet" href="/screens/styles.css" type="text/css">
 <link rel="stylesheet" href="/screens/progreg_styles.css" type="text/css">
@@ -20,7 +20,10 @@ startTimeout(600000, "/");
 <body>
 <!-- begin toplogo_loggedin.html file -->
 <!-- Rel 2009B Example Set -->
-<!-- Updated: December 08 2009 -->
+<!-- Updated: 06 Oct 2010 -->
+<script type="text/javascript">
+if (document.body){document.body.className = "bodybg";}
+</script>
 
 <div class="minHeight">
 <div class="fullPage">
@@ -31,14 +34,16 @@ startTimeout(600000, "/");
 
 <div class="topLinks">
 <ul id="topLinksList">
+
 <li>
 <a href="/patroninfo">Return To Your Record</a>
 </li>
-<li><a href="/" tabindex="120">Log Out</a></li>
-<li><a href="" onClick="window.print();" tabindex="115"><span class="buttonTopLinks"><img src="/screens/ico_printer.gif" alt=""><span class="buttonTopLinksText">Print</span></span></li>
-<li><a href="/search/" tabindex="110">New Search</a></li>
-<li><a href="/help" tabindex="105">Help</a></li>
+<li><a href="/logout" tabindex="120">Log Out</a></li>
+<li><a href="/help" tabindex="115">Help</a></li>
+<li><a href="#" onClick="window.print();" tabindex="110"><span class="buttonTopLinks"><img src="/screens/ico_printer.gif" alt=""><span class="buttonTopLinksText">Print</span></span></a></li>
+<li><a href="/search/" tabindex="105">New Search</a></li>
 </ul>
+</div>
 
 </div>
 
@@ -50,28 +55,26 @@ startTimeout(600000, "/");
 
 <div class="topMyLibrary">
 <div id="topMyLibraryHeader"><h1>My Library</h1></div>
-<!--<ul id="topMyLibraryList">
-<li><a href="/acquire">Suggest a purchase</a></li>
-<li><a href="/suggest">Leave Comments</a></li>
-</ul> -->
-
 <ul id="toplogoMoreNav">
-<li><a href="/acquire">Suggest a purchase</a></li>
+<!-- Toplogo alt links. -->
+<!--<li><a href="/acquire">Suggest a purchase</a></li>
 <li><a href="/suggest">Leave Comments</a></li>
+-->
 
-<!-- Toplogo optional dropdown menus. Uncomment and ensure all links work locally. -->
-<!--
-
+<!-- Dropdown menus -->
 	<li id="first">
-		<div><a href="">Your Library</a></div>
+		<div><a href="/patroninfo">My Library</a></div>
 		<ul>
-			<li><a href="/selfreg">Create an account</a></li>
-			<li><a href="/libinfo">About the library</a></li>
+            <li><a href="/patroninfo">My Account</a></li>
+            <!--<li><a href="/selfreg">Create an account</a></li> -->
+            <li><a href="/libinfo">About the library</a></li>
+            <li><a href="/acquire">Suggest a purchase</a></li>
+            <li><a href="/suggest">Comments</a></li>
 		</ul>
 	</li>
 
 	<li>
-		<div><a href="">Help Topics</a></div>
+		<div><a href="/help">Help Topics</a></div>
 		<ul>
 			<li><a href="/help#searching">Searching</a></li>
 			<li><a href="/help#searchtips">Advanced Keyword Search Tips</a></li>
@@ -82,19 +85,20 @@ startTimeout(600000, "/");
 			<li><a href="/help#programs">Library Events and Community Programs</a></li>
 		</ul>
 	</li>
-
+<!--
 	<li id="last">
-		<div><a href="">Features</a></div>
+		<div><a href="#">Features</a></div>
 		<ul>
-			<li><a href="http://example.org/iii/encore">Search Encore</a></li>
-			<li><a href="/iii/calendar/month">Program Calendar</a></li>
-			<li><a href="/search/y">Find e-resources</a></li>
-			<li><a href="/rpro">Research Pro</a></li>
-            <li><a href="/illb">Inter-Library Loan</a></li>
+            <li><a href="<encore IP/iii/encore>">Search Encore</a></li>
+            <li><a href="/iii/calendar/month">Program Calendar</a></li>
+            <li><a href="/ftlist">Featured Lists</a></li>
+            <li><a href="/rpro">Research Pro</a></li>
+            <li><a href="/search/y">Find e-resources</a></li>
+            <li><a href="/illb">Interlibrary Loan</a></li>
 		</ul>
-	</li>
-End optional dropdown menus  -->
-
+	</li> -->
+<!-- End dropdown menus -->    
+    
 </ul>
 <script type="text/javascript"><!--//--><![CDATA[//><!--
 
@@ -131,15 +135,19 @@ return false;
 </script>
 <div id="searchNavMenu">
 <select name="specializedSearch" id="specializedSearch">
-<option selected="selected" value=" ">(Specialized Searches)</option>
-<option value="/search/X">Advanced</option>
-<option value="/search/a">Author</option>
+<option selected="selected" value=" ">(More Searches)</option>
+<option value="/search/X">Advanced Keyword</option>
 <option value="/search/t">Title</option>
+<option value="/search/s">Journal Title</option>
+<option value="/search/a">Author</option>
 <option value="/search/d">Subject</option>
+<option value="/search/y">Resource Name</option>
 <option value="/search/c">Call Number</option>
-<!--<option value="/programs">Program</option> -->
-<!--<option value="/search/i">ISBN</option> -->
-<!--<option value="search/q">Author and Title</option> -->
+<option value="/search/i">ISBN</option>
+<option value="/search/g">Government Document #</option>
+<option value="/search/q">Author and Title</option>
+<!--<option value="/search/p">Instructor</option>
+<option value="/search/r">Course</option> -->
 </select>
 <input type="image" src="/screens/ico_go.gif" class="searchNavBut" value="Go" onclick="GotoURL();" >
 </div>

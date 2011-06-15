@@ -38,10 +38,12 @@ For 10pt, apply .7353em
 /* Section 1 */
 /*Global tag styles*/
 
-body { background:url(background.gif) 2% 0% repeat-x #4D4D4D; color: #444444; font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-size:85%; font-style:normal; font-weight: normal; height:100%; text-align:center; width:100%; margin-top:0px; }
+body { font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-size:85%; font-style:normal; font-weight: normal; height:100%; text-align:center; width:100%; margin-top:0px; background:#FFFFFF }
+
+body.bodybg { background:url(background.gif) 2% 0% repeat-x #4D4D4D; color: #444444; }
 
 /* Generated popup body */
-body > font { background:#FFFFFF; width:94%; padding:30px 50px 240px; margin-bottom:-64px; font-size:1em; }
+body > font { background:#FFFFFF; font-size:1.3em; line-height:2em; margin-left:3px; }
 
 body > br { line-height:0px; }
 
@@ -50,6 +52,10 @@ body > div { background:#FFFFFF; padding-bottom:10px; padding-top:10px; }
 body > div.mylistsSavePage { background:none; padding-bottom:0px; padding-top:0px; }
 
 body > span { margin-top:-20px; }
+
+body > a, body > p, body > h1, body > h2, body > h3, body > h4 { margin-left:3px; }
+
+body > * { text-align:left;}
 
 caption { border-bottom:1px solid #D3D3D3; font-weight:bold; text-align:center; }
 
@@ -91,7 +97,7 @@ strong .button { display:block; font-weight:normal; margin-top:15px; }
 
 table { border-collapse:collapse; }
 
-td { font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-style: inherit; font-weight:inherit;}
+td { font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight : normal; }
 
 th { font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; }
 
@@ -130,7 +136,11 @@ a:hover  { color: #7C14B8; }
 
 .advancedSearch label { text-align:right; }
 
-.availLimMessage { }
+.advancedSearch fieldset fieldset legend { visibility:hidden; line-height:0px; }
+
+#accessibleForm .advancedSearch fieldset fieldset { border:none; padding:0; text-align:left; margin:0 0 6px 0; }
+
+.availLimMessage { font-style:normal; }
 
 .bibClear { clear:both; }
 
@@ -172,7 +182,7 @@ a:hover  { color: #7C14B8; }
 
 .bibDisplayItemsMain, .resourceLicenseArea { float:right; width:80%; }
 
-.bibDisplayJacket  { float:left; margin:0 0 1em 3.5%; display:inline; width:130px; text-align:center; }
+.bibDisplayJacket  { float:left; margin:0 0 1em 5%; display:inline; width:6em; }
 
 .bibLinks th { text-align:center; }
 
@@ -188,7 +198,7 @@ h1.bibDisplayTitle { display:inline; font-size:1em; }
 
 .bibInfoData { vertical-align:top; }
 
-.bibInfoLabel, .resourceInfoLabel  { color:#767C70; padding-right:.7em; text-align:right; vertical-align:top; font-weight:bold; font-style:normal; }
+.bibInfoLabel, .resourceInfoLabel { color:#767C70; padding-right:.7em; text-align:right; vertical-align:top; font-weight:bold; font-style:normal; }
 
 .resourceInfoLabel  { width:15%; }
 
@@ -254,9 +264,34 @@ table.bibResourceTable { border:0; }
 
 .bibVol td { text-align:center; }
 
-.bookingForm fieldset { margin-bottom:10px; }
+.bookingForm { width:66em; }
+
+.bookingForm fieldset { margin-bottom:10px; font-weight:bold; }
+
+.bookingForm fieldset fieldset { padding-left:6px; font-weight:normal; }
+
+.bookingForm#accessibleForm h2 { margin:0; }
 
 .bookingsCalendar table { background:#FFFFFF; border:1px solid #CCCCCC; margin:10px 0; }
+
+.bookingsCalendar td#h1, .bookingsCalendar td#h2, .bookingsCalendar td#h3, .bookingsCalendar td#h4, .bookingsCalendar td#h5, .bookingsCalendar td#h6, .bookingsCalendar td#h7, .bookingsCalendar td#h8, .bookingsCalendar td#h9, .bookingsCalendar td#h10, .bookingsCalendar td#h11, .bookingsCalendar td#h12, .bookingsCalendar td#h13, .bookingsCalendar td#h14, .bookingsCalendar td#h15, .bookingsCalendar td#h16, .bookingsCalendar td#h17, .bookingsCalendar td#h18, .bookingsCalendar td#h19, .bookingsCalendar td#h20, .bookingsCalendar td#h21, .bookingsCalendar td#h22, .bookingsCalendar td#h23  { min-width:18px; text-align:center; }
+
+/* The first hour shown must be wider for "AM." */
+.bookingsCalendar td#h6 { min-width:30px; }
+
+div.bookingsVerify { padding:0; margin-top:18px; }
+
+.bookingsVerify#accessibleForm font { padding:0; }
+
+.bookingsVerify input { display:block; margin-bottom:10px; }
+
+.bookingsVerify .bibInfo { margin-bottom:10px; }
+
+.bookingsVerify br { line-height:2px; }
+
+.bookingsVerify a { text-decoration:none; }
+
+.bookingsVerify a .buttonText  { text-decoration:underline; }
 
 /* Brief Citation display styles */
 
@@ -394,7 +429,9 @@ table.browseResourceTable { border:0; }
 
 .browseSubEntryMedia { padding-bottom:.4em; }
 
-.browseSuperEntry  { background:#FFFFFF url('tile_browsesuperentry.jpg') repeat-x bottom left; border-bottom:1px solid #D3D3D3; margin:0; text-align:center; font-size:1.1em;}
+.browseSuperEntry  { background:#FFFFFF url('tile_browsesuperentry.jpg') repeat-x bottom left; border-bottom:1px solid #D3D3D3; margin:0; text-align:center; }
+
+h1.browseSuperEntryTitle { font-size:1.1em; display:inline; }
 
 .button { white-space:nowrap;  }
 
@@ -432,6 +469,16 @@ table.browseResourceTable { border:0; }
 
 .confirmationprompt { margin:5px 20px 0; }
 
+.checkinCardTable td { border:1px solid #CCCCCC; padding:3px 3px 0; }
+
+.checkinInfo { margin:1em 1em 0.5em; }
+
+.checkinCard { margin-left:21%; text-align:left; }
+
+.checkinInfoLabel { clear:both; font-weight:bold; width:19%; text-align:right; }
+
+.checkinInfoData { height:auto; }
+
 .ecommerceFormDone { background:#ffffff; margin-left:auto; margin-right:auto; padding:0px; text-align:left; width:97%; padding-bottom:12em; }
 
 .ecommerceFormDone > div, .ecommerceFormDone > span { margin:10px 20px 15px; }
@@ -457,6 +504,14 @@ div .confirmValue { padding-top:3px; }
 .ecommerceFormExample { margin:5px 0; }
 
 .payformTotals {margin: 6px 0 0; }
+
+.ecTitleCollapse { background:url("elcontent-arrows-closed.png") no-repeat scroll right center transparent; }
+
+.ecTitleOpen { background:url("elcontent-arrows-open.png") no-repeat scroll right center transparent; }
+
+.ecTitleCollapse, .ecTitleOpen { padding:0 0.9em 0 0; }
+
+.ccIssue { margin: .5em 0 .2em 0; font-weight:bold; }
 
 /*Export*/
 
@@ -508,15 +563,15 @@ div .bibResourceSidebar { display:none; }
 
 .form2Part formLabel, .form1Part formLabel { font-size:.8824em; }
 
-.form3Part fieldset { padding:10px; }
+.form3Part fieldset { padding:5px; }
 
 .form3Part  { background:#F2F2F2; border:1px solid #D3D3D3; float:left; margin:0 20px 15px 0; }
 
-#form3PartAdvLimitSort { font-size:.8824em; }
+#form3PartAdvLimitSort { }
 
-#form3PartAdvLimitSort label { display:table-cell; float:left; margin-left:8px; padding-right:5px; width:5em; }
+#form3PartAdvLimitSort label { display:table-cell; float:left; padding-right:5px; width:5em; }
 
-#form3PartAdvLimitSort select { float:right; margin-right:15px; width:144px; }
+#form3PartAdvLimitSort select { margin-left:2px; width:144px; }
 
 .form3PartAbove { display:inline-block; padding:10px 10px 0; }
 
@@ -538,11 +593,11 @@ div .bibResourceSidebar { display:none; }
 
 .formMultiSelect { display:inline; }
 
-.fullPage { background:#ffffff; margin-left:auto; margin-right:auto; padding:0px; text-align:left; }
+.fullPage { background:#ffffff; padding:0px; text-align:left; }
 
 .pageContent div.helpContent { padding-bottom:12em; }
 
-#gbsLink img {margin-top:8px;}
+.pageContent > table .browseSearchtool em { margin-left:0px; }
 
 .helpContent h3 { font-size:1.1em; margin-bottom:0px; }
 
@@ -606,9 +661,21 @@ div .bibResourceSidebar { display:none; }
 
 .loginForm fieldset { border: 3px solid #E7E7E7; color:#444444; margin:0 6px 0 6px; }
 
+.mainMenuContent { margin-top:45px; text-align:left; }
+
+.mainMenuContentLeft { float:left; margin-right:15px; margin-left:30px; }
+
+.mainMenuContentRight { float:left; }
+
+.mainMenuContentRight ul { list-style:none; padding:0px; }
+
+.mainMenuContentRight li { margin:0px 0px 15px 0px; }
+
 .mainSearch { text-align:center; }
 
-.mainSearch .form1Part { float:none; width:600px; margin-left:auto; margin-right:auto; margin-top:36px; text-align:center; }
+.mainSearch .form1Part { float:none; margin-top:36px; text-align:center; }
+
+.mainSearch .form1Part, .mainMenuContent { width:600px; margin-left:auto; margin-right:auto;  }
 
 .minHeight { height:100%; width:97%; margin-left:auto; margin-right:auto; background:#ffffff; padding-bottom:0; padding-top:0; }
 
@@ -676,6 +743,8 @@ div .bibResourceSidebar { display:none; }
 #patButFines a { background:#FFFFFF url('ico_payment.gif') no-repeat top left; margin-left:5px; padding-left:25px; line-height:1.8em; }
 
 #patButHolds a { background:#FFFFFF url('ico_redflag.gif') no-repeat top left; margin-left:5px; padding-left:25px; line-height:1.8em; }
+
+#patButIll a { line-height:1.8em; }
 
 #patButChkouts a { background:#FFFFFF url('ico_books.gif') no-repeat top left; }
 
@@ -753,9 +822,13 @@ td.progInfoLabel { color:#767C70; font-weight:bold; padding-right:25px; text-ali
 
 .rateHelp td { padding: 0 8px 8px 0; }
 
-.rateLabel { position:absolute; left:-1000px; top:-1000px;}
+#bibDisplayBody .rateLabel a:link, #bibDisplayBody .rateLabel a:visited { color:#767C70; padding-right:.7em; text-align:right; vertical-align:top; font-weight:bold; font-style:normal; text-decoration:underline; }
 
-.rateData { margin-left:9%; }
+.rateLabel { position:absolute; text-align:right; width:8.5%; font-size:85%; }
+
+.rateData { margin-left:15%; }
+
+#bibDisplayBody .rateData a:link, #bibDisplayBody .rateData a:visited { padding:0; }
 
 .relSearchLink img { }
 
@@ -771,6 +844,8 @@ td.progInfoLabel { color:#767C70; font-weight:bold; padding-right:25px; text-ali
 
 .requestForm .formButtonArea { margin-left:0; }
 
+.requestForm .formEntryArea label { display:block; }
+
 .requestForm #itemreq { margin:9px 9px 3px 3px; }
 
 .requestForm #artreq { margin:9px 3px 3px 9px; }
@@ -778,6 +853,8 @@ td.progInfoLabel { color:#767C70; font-weight:bold; padding-right:25px; text-ali
 .requestForm strong { font-style:italic; }
 
 .requestMultiItems { margin:10px; clear:both; }
+
+.requestMultiPatform .formEntryArea label { display:block; }
 
 .requestMultiItems td { border:1px solid white; }
 
@@ -803,12 +880,6 @@ td.progInfoLabel { color:#767C70; font-weight:bold; padding-right:25px; text-ali
 
 .recordPager a { font-weight:bold; }
 
-.resourceButton {text-align:center;}
-
-.resourceButton img {margin:.5em;border:none;}
-
-#resourceHeader { background:#E7E7E7; color:#767C70; text-align:center; font-weight:bold; height:2.5em; padding-top:1em; margin-bottom:.5em;}
-
 .resourcePager { width:10em; margin-left:auto; }
 
 table.resourceResource { margin:15px; width:95%; }
@@ -824,8 +895,6 @@ table.reserveBibs { margin:25px 0 20px 15%; width:65%; }
 .reviewDate { color:#767C70; }
 
 .reviewLinks { font-size:1em; margin:0 0 4px 8px; }
-
-.rrUserQuery { color:#457029; }
 
 #bibDisplayBody .reviewLinks a:link, #bibDisplayBody .reviewLinks a:active, #bibDisplayBody .reviewLinks a:visited  { color:#369699; }
 
@@ -851,7 +920,8 @@ div.rssChannelEntries { border:none; background:#FFFFFF; }
 
 #searcharg { }
 
-.searchNav { background:#3B77B6; margin:0;}
+/*Relative position allows this bg color to show in older IE.*/
+.searchNav { background:#3B77B6; margin:0; position:relative; }
 
 #searchNavMenu { margin:0; text-align:right; }
 
@@ -862,6 +932,8 @@ div.rssChannelEntries { border:none; background:#FFFFFF; }
 #skipNav a:active, #skipNav a:focus { position:static; width:auto; height:auto; margin-bottom:3px; background:#FFFFFF; }
 
 #specializedSearch { vertical-align:bottom; margin-bottom:3px; }
+
+.submitHidden { position:absolute; left:-999px; top:-999px; }
 
 /* Staff view */
 
@@ -895,7 +967,7 @@ div.rssChannelEntries { border:none; background:#FFFFFF; }
 
 .topLogoSmall a:link, .topLogoSmall a:visited { background:#FFFFFF; padding:0; }
 
-.topLinks { float: right; height: auto; margin:0; padding:0; width: 45em; }
+.topLinks { float: right; height: auto; margin:0; padding:0; width: 50%; }
 
 #topLinksList a:link, #topLinksList a:visited  { color: #1367A7; font-family:Arial,"Arial Unicode MS",Helvetica,Verdana,sans-serif; font-weight:bold; padding:6px 15px 3px 15px; text-decoration:none; width:auto; }
 
@@ -919,13 +991,14 @@ div.rssChannelEntries { border:none; background:#FFFFFF; }
 
 #topMyLibraryList { width: 100%; }
 
-#topMyLibraryHeader h1 {  color: #767C70; display: inline; float:left; font-family:Arial,"Arial Unicode MS",Helvetica,Verdana,sans-serif; font-size: .9167em; margin:0; padding:6px 10px 3px 10px; text-decoration:none; width:auto; }
+/*#topMyLibraryHeader h1 {  color: #767C70; display: inline; float:left; font-family:Arial,"Arial Unicode MS",Helvetica,Verdana,sans-serif; font-size: .9167em; margin:0; padding:6px 10px 3px 10px; text-decoration:none; width:auto; } */
+#topMyLibraryHeader h1 { position:absolute; left:-9999px; line-height:0px; }
+
 
 /*Toplogo optional dropdown menus*/
 
-#toplogoMoreNav { list-style: none; padding: 0; margin: 0; float:left; } 
-
-#toplogoMoreNav a { } 
+/*#toplogoMoreNav { list-style: none; padding: 0; margin: 0; float:left; border:2px solid pink; } */
+#toplogoMoreNav { list-style: none; padding: 0; margin: 0; } 
 
 #toplogoMoreNav a { text-decoration: none; } 
 
@@ -933,7 +1006,7 @@ div.rssChannelEntries { border:none; background:#FFFFFF; }
 
 #toplogoMoreNav li li a:hover { text-decoration:underline; } 
 
-#toplogoMoreNav li { position: relative; cursor: default; background-color: white; margin-right:1em; margin-top:5px; float:left; } 
+#toplogoMoreNav li { cursor: default; background-color: white; margin-right:1em; margin-top:5px; float:left; padding:0; } 
 
 #toplogoMoreNav li#first { } 
 
@@ -943,15 +1016,21 @@ div.rssChannelEntries { border:none; background:#FFFFFF; }
 
 #toplogoMoreNav li>ul { top: auto; left: auto; } 
 
-#toplogoMoreNav li li { display: block; float: none; background-color: transparent; border: 0; } 
+#toplogoMoreNav li li { display: block; float: none; background-color: transparent; border:0; border-bottom:1px solid white; }
 
 #toplogoMoreNav li ul li { margin:0; } 
 
-#toplogoMoreNav li:hover ul, li.over ul { visibility:visible; display: block; position: absolute; top: 100%; left: 0; } 
+#toplogoMoreNav li:hover ul, #toplogoMoreNav li.over ul { visibility:visible; display:block; }
+
+#topMyLibraryHeader { float:left; }
+
+div#searchNavMenu { clear:both; float:right; background:#3B77B6; width:100%; }
+
+/*Special treatment for IE6, using the JS-activated "li.over"*/
+#toplogoMoreNav li.over ul { margin:0; }
 
 /*End optional dropdown menus*/
 
-#video {text-align:center; margin:1em;}
 
 .volumeSelect fieldset { padding:10px; }
 
@@ -961,7 +1040,7 @@ div.rssChannelEntries { border:none; background:#FFFFFF; }
 
 .wblinkdisplay .linkdisplay { padding:0px; }
 
-/* Section 3: WebBridge */
+
 /* table striping styles */
 /* for brief citation */
 
@@ -969,12 +1048,13 @@ td.odd { background:#F8F8F8; }
 
 td.highlight { background:#FFFFE4; }
 
-
 /* for browse entries */
 
 tr.odd { background:#F8F8F8; }
 
 tr.highlight { background:#FFFFE4; }
+
+/* Section 3: WebBridge */
 
 .webbridge a:link,.webbridge a:visited  { color: #014184; font-family:Arial,"Arial Unicode MS",Helvetica,Verdana,sans-serif; font-weight:bold; padding:6px 5px 3px 0px; text-decoration:none; width:auto; }
 
@@ -1011,29 +1091,3 @@ tr.highlight { background:#FFFFE4; }
 .wblinkdisplay form { margin-bottom:8px; }
 
 .wbnoresources { display:block; margin: 3px 0; }
-
-/*SMS Feature*/
-
-#info, #sms {
-       border:1px solid #36647b;
-       position:absolute;
-       top:455;
-       left:455; 
-       z-index:1000;
-       background:#fff;
-       padding:10px;
-       margin:10px;
-       background:#efefcf;
-       width:45em;
-}
-
-#sms .eg {
-       font-style:italic;
-       font-size:80%;
-}
-
-#info {top:500}
-
-#sms {font-size:70%}
-
-
