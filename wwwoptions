@@ -63,8 +63,8 @@ CUSTOM_MESSAGES=F
 STARTOVER=/search
 STATGROUP=login
 STYLESHEET=/screens/styles.css
-SUPPRESS_OPTION=STARTOVER,ANOTHER,NEWSRCH,MYLISTS_RECORD,MYLISTSRECORD
-
+SUPPRESS_OPTION=STARTOVER,ANOTHER,NEWSRCH
+TIMEOUT=600;URL=/
 TOPLOGO=@screens/toplogo.html
 UPDATECIRC=true
 XSTARTOVER=/search
@@ -84,7 +84,7 @@ FRAMEURL=0
 IBROWSE_MAX=10000
 KEYWORD_COLOR=Y|all|red
 MULT_LIMITS=true
-NOSEARCH=nubf
+NOSEARCH=nub
 OFFER_HISTORY=true
 
 # Advanced Searching
@@ -132,7 +132,7 @@ ICON_PAGING_CAPTION=Result Page&nbsp;
 ICON_PAGING_NEXT=Next
 ICON_PAGING_PREV=Prev
 ICON_PROGRAM=<img src="/screens/media_program.gif" border="0" alt="Library Event">
-ICON_RESOURCE=<img src="/screens/media_resource.gif" ALT="" title="Internet Resource">
+ICON_RESOURCE=<img src="/screens/media_resource.gif" alt="Internet Resource">
 ICON_SAVEALLPAGE=<span class="button"><img src="/screens/ico_bag_add.gif" alt=""><span class="buttonText">Add All On Page</span></span>
 ICON_SAVEMARKED=<span class="button"><img src="/screens/ico_bag_add.gif" alt=""><span class="buttonText">Add Marked to Bag</span></span>
 IMAGE_MATTYPE-=/screens/media_book.gif
@@ -173,7 +173,7 @@ BIB_TOC_HEADER=<strong><span id="contentsLabel">Table of Contents</span></strong
 ICON_BUT_MARC_DISPLAY=<span class="button"><img src="/screens/ico_marc.gif" alt=""><span class="buttonText">MARC Display</span></span>
 ICON_BUT_REGULAR_DISPLAY=<span class="button"><img src="/screens/ico_back.gif" alt=""><span class="buttonText">Regular Display</span></span>
 ICON_BUT_RTRNTB=<span class="button"><img src="/screens/ico_back.gif" alt=""><span class="buttonText">Return to Browse</span></span>
-DISPLAY_856=z|true
+DISPLAY_856=z|false
 HOLDINGS_POS=atpR
 #HOTLINK=i^020,c^09,n^505
 ICON_BIB_HOLDINGS_ITEMS=View Copies
@@ -205,7 +205,7 @@ BIB_RESOURCE_CAPTION=<strong>This title is available electronically via:</strong
 BIB_RESOURCE_FIELDS=:VeT|:VeE|:Vek
 BIB_RESOURCE_FIELDS_BRIEF=:VcY|:Vch|:VeE
 BIB_RESOURCE_NUM_BRIEF=A
-ICON_BIB_RESOURCE_DETAILS=<img src="/screens/bib_resource_details.gif" class="button" border="0" alt="Full Details">
+ICON_BIB_RESOURCE_DETAILS=<span class="button"><span class=buttonText">Full Details</span></span>
 ICON_RESOURCE_RECORD=<span class="button"><span class=buttonText">View Resource Record</span></span>
 RESOURCE_ADVISORY=k
 RESOURCE_HOLDINGS_FIELDS=Title:VbT|Coverage:Vch|Full Text:VcY
@@ -219,8 +219,8 @@ TABLEPARAM_RESOURCE_LICENSE=width="100%" border="0" cellpadding="0"
 TABLEPARAM_RESOURCE_RESOURCE=width="100%" border="0" cellspacing="0" cellpadding="0"
 
 # Holdings
-BUT_CARDFORM_BOX=/screens/cardform_box.gif
-BUT_CARDFORM_LIN=/screens/cardform_lin.gif
+ICON_BUT_CARDFORM_BOX=<span class="button"><img src="/screens/ico_gear.gif" alt=""><span class="buttonText">Show Cards in Box Format </span></span>
+ICON_BUT_CARDFORM_LIN=<span class="button"><img src="/screens/ico_gear.gif" alt=""><span class="buttonText">Show Cards in Line Format</span></span>
 CHECKIN_BGCOLOR=ARRIVED=#FFFFFF|EXPECTED=#FFFFFF|TO BIND/BOUND=#FFFFFF|LATE=#FFFFFF|OTHER=#FFFFFF
 CHECKIN_FONTCOLOR=ARRIVED=GREEN|EXPECTED=BLACK|TO BIND/BOUND=RED|LATE=BLACK|OTHER=BLACK
 CHECKIN_STATUS=ARRIVED=Here|EXPECTED=Coming soon|TO BIND/BOUND=Being bound|LATE=Late|Other=See staff
@@ -240,7 +240,7 @@ ICON_MYLISTS_RENAME=<div onmousedown="this.className='pressedState';" onmouseout
 ICON_MYLISTS_SAVE=<span class="button"><img src="/screens/ico_list_add.gif" alt=""><span class="buttonText">Add to My Lists</span></span>
 ICON_MYLISTS_SAVE_TO_LIST=<span class="button"><img src="/screens/ico_list_add.gif" alt=""><span class="buttonText">Add Marked to My Lists</span></span>
 ICON_MYLISTS_BRIEF=<span class="button"><img src="/screens/ico_list_add.gif" alt=""><span class="buttonText">Add to My Lists</span></span>
-ICON_BACK_TO_MYLISTS=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Back to MyLists</span></span></div></div>
+ICON_BACK_TO_MYLISTS=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Back to My Lists</span></span></div></div>
 ICON_MYLISTS_RECORD=<span class="button"><img src="/screens/ico_list_add.gif" alt=""><span class="buttonText">Add to My Lists</span></span>
 
 # Saving and Exporting
@@ -263,8 +263,8 @@ ICON_BUT_REQUEST_RESET=<div onmousedown="this.className='pressedState';" onmouse
 ICON_BUT_REQUEST_SELECTED=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Request Selected</span></span></div></div>
 ICON_REQUEST=<img src="/screens/bullet.gif" alt="" border="0" style="margin-right:5px">Request
 #REQFILLTIME=14|<br>Request available in approximately %d days|<br>Current estimated availability: approximately %d days|<br>This material may be immediately available
-REQUEST=Hold this item|bib|ask|N
-REQUEST_ARTICLE_IFCHKIN=Y
+REQUEST=Hold this item|bib|ask|Y
+#REQUEST_ARTICLE_IFCHKIN=Y
 #REQUEST_INSTRUCTION=Please enter any special instructions: 
 REQUEST_MULTI=Request All Items in Book Cart|bib|ask
 
@@ -290,6 +290,8 @@ ICON_BUT_UPDATE_HOLDS=<div onmousedown="this.className='pressedState';" onmouseo
 CHANGE_HOLD_LOC=true
 #FREEZE_HOLDS=true
 ICON_CLOSEWINDOW=<span class="button"><img src="/screens/ico_x.gif" alt=""><span class="buttonText">Close Window</span></span>
+ICON_CONFIRM_YES=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Yes</span></span></div></div>
+ICON_CONFIRM_NO=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">No</span></span></div></div>
 ICON_PAT_CANCELALL=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Cancel All</span></span></div></div>
 ICON_PAT_CANCELMARK=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Cancel Selected</span></span></div></div>
 ICON_PIN_RESET=<span class="button"><img src="/screens/ico_questionmark.gif" alt=""><span class="buttonText">Forget Your PIN?</span></span>
@@ -304,7 +306,7 @@ PATRON_FIELDS=n/a|a/a|t/a|F/43
 #Note that in the PATRON_MSG web option you should replace z with the field tag used on your system for messages.
 #PATRON_MSG=z|Message from the library
 #PATRON_NOTICES=apz
-PIN_ALPHA_NUM=true
+PIN_ALPHA_NUM=false
 PIN_NUM_ONLY=false
 PIN_RESET=true
 #PIN_RESET_EMAIL=Request to reset your library PIN|INSERT LIBRARY FROM EMAIL HERE|INSERT LIBRARY REPLY-TO EMAIL HERE
@@ -312,7 +314,7 @@ PSTARTOVER=/search
 SEEPUDATE=true
 TABLEPARAM_PATDISP=border="0"|border="0"|border="0"
 TABLEPARAM_PATFUNC=border="0"|border="0"|border="0"
-TIMEOUT_POPUP=600
+#TIMEOUT_POPUP=600
 
 # My Millennium
 #BUT_LOGOUT=/screens/logout.gif
@@ -329,14 +331,14 @@ ICON_PAT_DELETE_MARKED=<div onmousedown="this.className='pressedState';" onmouse
 ICON_READING_HISTORY=<span class="button"><img src="/screens/ico_clock.gif" alt=""><span class="buttonText">Reading History</span></span>
 ICON_READING_HISTORY_OPTIN=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Opt In</span></span></div></div>
 ICON_READING_HISTORY_OPTOUT=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Opt Out</span></span></div></div>
-ICON_READING_HISTORY_EXPORT=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Export My Reading History</span></span></div></div>
+ICON_READING_HISTORY_EXPORT=<span class="button"><img src="/screens/ico_disc.gif" alt=""><span class="buttonText">Export My Reading List</span></span>
 LOGGEDIN_MSG=<span class="loggedInMessage">You are logged in <span class="loggedInMoreInfo">to %s</span> as %s</span>
 NO_REVERIFY=acq,book,ill,media,mmf,req,wam,z39,mfrpro
 PATRONVIEW_START=holds,ill,mylists,fines,chkouts,bookings,psearch,mffavs,readhist,patrate,patreview,programs,irnr
 PREF_SEARCHES=25|Y
 PREFTEXT=Save as preferred search
 READING_HISTORY=optin|true|
-TOPLOGO_LOGGEDIN=T
+TOPLOGO_LOGGEDIN=False
 
 # Patron Ratings
 ICON_PATRATE=<span class="button"><img src="/screens/patrate.gif" alt=""><span class="buttonText">My Ratings</span></span>
@@ -359,7 +361,7 @@ CC_DECLINED=Sorry. Your payment has been declined. Please confirm your informati
 ICON_PAY=<span class="button"><img src="/screens/ico_payment.gif" alt=""><span class="buttonText">Pay Online</span></span>
 ICON_PAY_CLEAR_ALL=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Clear All</span></span></div></div>
 ICON_PAY_SELECT_ALL=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Select All</span></span></div></div>
-ICON_PRINT=ICON_PRINT=<span class="button"><img src="/screens/ico_printer_alt.gif" alt=""><span class="buttonText">Print</span></span>
+ICON_PRINT=<span class="button"><img src="/screens/ico_printer_alt.gif" alt=""><span class="buttonText">Print</span></span>
 ICON_PAY_CONTINUE=<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Continue</span></span></div></div>
 #MINDONATE=1000|Donations must be at least $10.00 to cover processing costs. Thank you.
 #PAYAMTS=500|Please visit the library to pay this amount|00
@@ -380,14 +382,16 @@ ICON_BUT_ILL_CANCEL=<div onmousedown="this.className='pressedState';" onmouseout
 ICON_BUT_ILL_FORM=<span class="button"><img src="/screens/ico_gear.gif" alt=""><span class="buttonText">Interlibrary Loan Form</span></span>
 ICON_BUT_ILL_HOME=<span class="button"><img src="/screens/ico_up.gif" alt=""><span class="buttonText">New Request</span></span>
 ICON_BUT_PAT_ILL_FORM=<span class="button"><img src="/screens/ico_gear.gif" alt=""><span class="buttonText">Interlibrary Loan Form</span></span>
+ICON_BUT_PAT_ILL=<span class="button"><img src="/screens/ico_gear.gif" alt=""><span class="buttonText">Interlibrary Loan</span></span>
 ILL_CONF_EMAIL_SUBJECT=Library notification of Inter-library Loan request
 ILL_HOME=/screens/ill.html
 
 # INN-Reach
 IR_PLACEMENT=1
+INNREACH=<span class="button"><img src="/screens/ico_mobius.gif" alt=""><span class="buttonText">Search MOBIUS</span></span>@mobius.umsystem.edu(X=X*;Y=Y*;a=a;c=c;d=d;e=e;f=c;g=g;i=i;m=h;o=o;p=p;r=r;s=s;t=t)
 
 # Media Management
-BUT_RET2CRS=/screens/ret2crs.gif
+ICON_BUT_RET2CRS=<span class="button"><img src="/screens/ico_back.gif" alt=""><span class="buttonText">Return to Course</span></span>
 ERESERVE=[0123456789]
 #IMAGE_PRINT=yes
 #IMAGE_SAVE=yes
@@ -404,13 +408,14 @@ ICON_BUT_RET2FEAT=<span class="button"><img src="/screens/ico_back.gif" alt=""><
 FEATURED_LIST=100,101|Featured Items|||
 
 # Content Linking and Other Resources
+# If your system uses SSL, use the https example, to avoid secure/nonsecure warning on Internet Explorer.
 #BIBIMAGE=http://contentcafe2b.btol.com/ContentCafe/Jacket.aspx?UserID=PUTACCOUNTHERE&amp;Password=PUTACCOUNTHERE&amp;Return=T&amp;Type=S&amp;Value=%s&amp;erroroverride=1|I|http://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=PUTACCOUNTHERE&amp;Password=PUTACCOUNTHERE&amp;ItemKey=%s&amp;Options=Y
+#BIBIMAGE=https://contentcafe2b.btol.com/ContentCafe/Jacket.aspx?UserID=PUTACCOUNTHERE&amp;Password=PUTACCOUNTHERE&amp;Return=T&amp;Type=S&amp;Value=%s&amp;erroroverride=1|I|https://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=PUTACCOUNTHERE&amp;Password=PUTACCOUNTHERE&amp;ItemKey=%s&amp;Options=Y
 BIBIMAGE_TEXT=Book Cover
 BUT_ENCYCPD=/screens/encycpd.gif
 BUT_FULL_TEXT=/screens/full_text.gif
-#WEBADDRESS=http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&amp;field-keywords=%s|I|http://www.amazon.com/gp/search/ref=sr_adv_b/?field-isbn=%s|<span class="button"><img src="/screens/ico_info.gif" border="0" alt=""><span class="buttonText">More Information</span></span>|<span class="button"><img src="/screens/ico_info.gif" border="0" alt=""><span class="buttonText">More Information</span></span>|20
-#WEBADDRESS=|I|http://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=PUTACCOUNTHERE&amp;Password=PUTACCOUNTHERE&amp;ItemKey=%s&amp;Options=N||<span class="button"><img src="/screens/ico_info.gif" border="0" alt=""><span class="buttonText">More Information</span></span>
-#WEBADDRESS=http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&amp;field-keywords=%s|I|http://www.amazon.com/gp/search/ref=sr_adv_b/?field-isbn=%s|<span class="button"><img src="/screens/ico_info.gif" border="0" alt=""><span class="buttonText">More Information</span></span>|<span class="button"><img src="/screens/ico_info.gif" border="0" alt=""><span class="buttonText">More Information</span></span>|20
+#WEBADDRESS=|I|http://contentcafe2.btol.com/ContentCafeClient/ContentCafe.aspx?UserID=PUTACCOUNTHERE&amp;Password=PUTACCOUNTHERE&amp;ItemKey=%s&amp;Options=N||<span class="button"><img src="/screens/ico_info.gif" border="0" alt=""><span class="buttonText">More Information</span></span>|-1
+#WEBADDRESS=http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&amp;field-keywords=%s|I|http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&field-isbn=%s|<span class="button"><img src="/screens/ico_info.gif" border="0" alt=""><span class="buttonText">More Information</span></span>|<span class="button"><img src="/screens/ico_info.gif" border="0" alt=""><span class="buttonText">More Information</span></span>|-1
 
 # WebBridge/Pathfinder Pro
 ICON_BUT_CLOSEFRAME=<span class="button"><img src="/screens/ico_x.gif" alt=""><span class="buttonText">Close Frame</span></span>
@@ -442,7 +447,7 @@ ICON_BUT_NEXTREC=<span class="button"><span class="buttonText" id="buttonNextRec
 ICON_BUT_PREVREC=<span class="button"><img src="/screens/ico_previous.gif" alt=""><span class="buttonText">Previous Record</span></span>
 ICON_BUT_Z39_ANOTHER=Another Database
 ICON_BUT_Z39_REQUEST=<span class="button"><img src="/screens/ico_checkbox.gif" alt=""><span class="buttonText">Request</span></span>
-ICON_BUT_Z39SEARCH=<span class="button"><img src="/screens/ico_magnifyingglass.gif" alt=""><span class="buttonText">Search</span></span>
+ICON_BUT_Z39SEARCH=<span class="button"><img src="/screens/ico_magnifyingglass.gif" alt=""><span class="buttonText">Search Other Libraries</span></span>
 Z39BROADCAST=Z39.50 Broadcast Search:Please select the Z39.50 servers to which you want to send your search
 Z39MULTI=500:100
 
@@ -522,3 +527,7 @@ ICON_VIEW_ADDITIONAL_SESSIONS=<span class="button"><span class="buttonText">View
 ICON_HIDE_ADDITIONAL_SESSIONS=<span class="button"><span class="buttonText">Hide Additional Sessions</span></span>
 ICON_PROGRAM_CAL=<span class="button"><img src="/screens/ico_calendar.gif" alt=""><span class="buttonText">Events Calendar</span></span>
 TABLEPARAM_PROG_SECTIONS=width="100%" border="0" cellspacing="0" align="center"
+
+# Scoping
+
+LOCKSCOPE=no

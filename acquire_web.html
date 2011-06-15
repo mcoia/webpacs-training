@@ -13,6 +13,91 @@
 <div id="accessibleForm" class="form1Part">
 <form method="POST">
 
+<!--{ifneedpatronverify}-->
+
+<fieldset class="formLogin">
+<legend>
+<!--{enterinfo}-->
+</legend>
+
+<!--{ifextpat}-->
+<h2>Students, Staff, and Faculty</h2>
+<div class="formEntryArea">
+<label for="extpatid"><span class="formLabel">
+Username:
+</span></label>
+<!--{extpatid}-->
+<label for="extpatpw"><span class="formLabel">
+Password:
+</span></label>
+<!--{extpatpw}-->
+</div>
+<h2>Visitors</h2>
+<!--{xif}-->
+
+<!--{ifneedpatronname}-->
+<div class="formEntryArea">
+<label for="name">
+<!--{nameprompt}-->
+</label>
+<!--{name}-->
+<span class="formLabelExample">
+<!--{nameexample}-->
+</span>
+</div>
+<!--{xif}-->
+
+<div class="formEntryArea">
+<!--{barcodeprompt}-->
+<!--{barcode}-->
+<span class="formLabelExample">
+<!--{barcodeexample}-->
+</span>
+</div>
+
+<!--{ifneedspin}-->
+
+<!--{ifpinerrormessageisPIN}-->
+<p>
+<!--{newpinmsg}-->
+</p>
+<div class="formEntryArea">
+<span class="formLabel">
+<!--{pin1prompt}-->
+</span>
+<!--{pin1}-->
+</div>
+<div class="formEntryArea">
+<span class="formLabel">
+<!--{pin2prompt}-->
+</span>
+<!--{pin2}-->
+</div>
+
+<!--{else}-->
+<div class="formEntryArea">
+<!--{pinprompt}-->
+<!--{pin}-->
+<span class="formLabelExample">
+<!--{pininstructions}-->
+</span>
+</div>
+
+<!--{xif}-->
+<!--{xif}-->
+
+    <!--{ifalternate_id}-->
+    <!--{user_name}-->
+    <!--{xif}-->
+
+<div class="formButtonArea">
+<!--{ifneedspin}-->
+<!--{pinresetrequest}-->
+<!--{xif}-->
+</div>
+</fieldset>
+<!--{xif}-->
+
 <fieldset>
 <legend>
 Additional items library should acquire:
@@ -53,11 +138,11 @@ Additional items library should acquire:
 <!--{other}-->
 </div>
 
+</fieldset>
+
 <div class="formButtonArea">
 <!--{submit}-->
 </div>
-
-</fieldset>
 
 </form>
 </div>

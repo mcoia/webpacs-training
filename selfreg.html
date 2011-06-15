@@ -15,7 +15,7 @@ The hidden template name below provides the patron template name IF a template n
 <!--{errmsg}-->
 </div>
 <!--{xif}-->
-<div class="errormessage">
+<div class="errormessage" id="selfRegMessage">
 </div>
 <fieldset>
 <legend>Please enter the following information: (<span class="formRequired">*</span> means required field)</legend>
@@ -66,6 +66,7 @@ The hidden template name below provides the patron template name IF a template n
 </form>
 </div> <!--accessibleForm -->
 </div><!-- pageContentInner -->
+
 <script type="text/javascript">
 function selfRegChecker(){
 var regForm = document.getElementsByTagName("INPUT");
@@ -138,6 +139,15 @@ break;
 }
 }
 return true;
+}
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+	if(selfRegChecker()){
+		var obj = getFormHandleForm(1);
+		obj.submit();
+	}
 }
 </script>
 <!--{botlogo}-->
