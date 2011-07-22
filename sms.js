@@ -1,7 +1,7 @@
 // JavaScript Document
 
 // set this to be the URL for the SMS script
-var smsurl = "http://mobiusconsortium.org/sms/sms-training.php?";
+var smsurl = "http://mco.mobius.umsystem.edu/sms/sms-train.php?";
 
    function showsms() {
 
@@ -31,8 +31,8 @@ try {
  out += '<input type=hidden name=title value=\"'+title+'\">';	//dump the title into a hidden form variable
  out += '<p><b>Enter your cell phone #</b>: <input name=phone type=text></p>';	// input for the phone #
  out += "<p class=eg>(use the full 10 digits of your phone #, no spaces, no dashes eg. 6105265000)</p>";
-out += "<p><b>Select your provider:</b><select name=provider>";	// pull-down for each of phone carriers the values will be parsed by the perl script
-	out += "<option value=att>AT&amp;T</option>";
+ out += "<p><b>Select your provider:</b><select name=provider>";	// pull-down for each of phone carriers the values will be parsed by the perl script
+	out += "<option value=att>AT&T</option>";
 	out += "<option value=northwest>Northwest Cellular</option>";
 	out += "<option value=sprint>Sprint</option>";
 	out += "<option value=tmobile>T-Mobile</option>";
@@ -62,7 +62,7 @@ out += "<p><b>Select your provider:</b><select name=provider>";	// pull-down for
  }	
 	// close the list and add note
    out += "</ol></p>";
-   out += "<p><strong>NOTE:</strong> Carrier charges may apply if your cell phone service plan does not include free text messaging.</p>";
+   out += "<p><strong>NOTE:</strong> Carrier charges may apply if you cell phone service plan does not include free text messaging.</p>";
    // add buttons at bottom.  note the return false which stops the forms from actually doing anything
    out += "<p><a href='#here' id='sendmessage' onClick='sendSMS();return false;'><img src='/screens/smssend.gif' border=0></a> <a href='#here' id='clearmessage' onClick='clearsms();return false;'><img src='/screens/smsclear.gif' border=0></a></p>";
 
@@ -73,7 +73,7 @@ out += "<p><b>Select your provider:</b><select name=provider>";	// pull-down for
    sms.style.visibility = 'visible';
    sms.style.display = 'block';
 	// some fancy positioning
-    findPos(document.getElementById('smsbutton'),sms,300,300);
+findPos(document.getElementById('smsbutton'),sms,300,300);
 } catch (e) {
 	// doesn't work?  hide the SMS buttons
 document.getElementById('smsfeatures').style.visibility='hidden';
