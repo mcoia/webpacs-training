@@ -886,6 +886,10 @@ td.progInfoLabel { color:#767C70; font-weight:bold; padding-right:25px; text-ali
 
 .requestResult font { font-size:1.4em; }
 
+.resourceButton {text-align:center;}
+
+.resourceButton img {margin:.5em;border:none;}
+
 .resourceDisplayContentMain { width:68%; }
 
 .resourceDisplayBibs { margin-bottom:20px; }
@@ -1117,7 +1121,8 @@ tr.highlight { background:#FFFFE4; }
 
 .wbnoresources { display:block; margin: 3px 0; }
 
-/*SMS Feature*/
+/* Texting Feature */
+
 
 #info, #sms {
        border:1px solid #36647b;
@@ -1140,5 +1145,3 @@ tr.highlight { background:#FFFFE4; }
 #info {top:500}
 
 #sms {font-size:70%}
-
-
