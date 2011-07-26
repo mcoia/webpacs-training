@@ -4,6 +4,6 @@
 <ShortName>Library Catalog</ShortName>
 <Description>Search your the library's catalog browser's search bar.</Description>
 <InputEncoding>UTF-8</InputEncoding>
-<Image width="16" height="16" type="image/x-icon">http://mcotrain.umsystem.edu/screens/favicon.ico</Image>
-<Url type="text/html" method="GET" template="http://mcotrain.umsystem.edu/search/X?{searchTerms}&amp;SORT=R" />
+<Image width="16" height="16" type="image/x-icon">http://mobius.umsystem.edu:2082/screens/favicon.ico</Image>
+<Url type="text/html" method="GET" template="http://mobius.umsystem.edu/search/X?{searchTerms}&amp;SORT=R" />
 </OpenSearchDescription>
